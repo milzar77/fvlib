@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE preferences PUBLIC "preferences" "http://java.sun.com/dtd/preferences.dtd" >
+<preferences EXTERNAL_XML_VERSION="0.0">
+  <root type="user">
+	<map />
+	<!-- This is the common package/area inherithed by all libraries under the tree of "weev-common.jar"  -->
+    <node name="common">
+		<map>
+		  <entry key="language" value="en"/>
+		</map>
+		<node name="logging">
+			<map>
+			  <entry key="channel" value="db"/>
+			  <!-- possible values are: db, memdb, fs, remfs -->
+			</map>
+			<node name="db">
+				<map>
+				  <entry key="jdbcDriver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+				  <entry key="jdbcUrl" value="jdbc:derby:/tmp/derby/log;create=false"/>
+				  <entry key="jdbcUser" value="APP"/>
+				  <entry key="jdbcPassword" value=""/>
+				  <entry key="schema" value="res/schema.sql"/>
+				  <entry key="dbPopulator" value="res/populator.properties"/>
+				  <entry key="dbStatementSeparator" value=";"/>
+				</map>
+			</node>
+			<node name="memdb">
+				<map>
+				  <entry key="jdbcDriver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+				  <entry key="jdbcUrl" value="jdbc:derby:/tmp/derby/log;create=false"/>
+				  <entry key="jdbcUser" value="APP"/>
+				  <entry key="jdbcPassword" value=""/>
+				</map>
+			</node>
+		</node>
+		<node name="window">
+			<map>
+				<entry key="title" value="Default application"/>
+			</map>
+			<node name="event">
+				<map />
+				<node name="init">
+					<map>
+						<entry key="maximized" value="Default application"/>
+					</map>
+				</node>
+				<node name="start">
+					<map />
+				</node>
+				<node name="end">
+					<map />
+				</node>
+			</node>
+		</node>
+    </node>
+  </root>
+</preferences>

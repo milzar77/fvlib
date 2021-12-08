@@ -1,0 +1,11 @@
+[EXCEPTION]:
+Exception in thread "main" javax.xml.parsers.FactoryConfigurationError: Provider org.apache.crimson.jaxp.DocumentBuilderFactoryImpl not found
+	at javax.xml.parsers.DocumentBuilderFactory.newInstance(DocumentBuilderFactory.java:129)
+	at java.util.prefs.XmlSupport.loadPrefsDoc(XmlSupport.java:224)
+	at java.util.prefs.XmlSupport.importPreferences(XmlSupport.java:182)
+	at java.util.prefs.Preferences.importPreferences(Preferences.java:1236)
+	at prefs.PrefsUtil.importPrefs(PrefsUtil.java:61)
+	at prefs.PrefsUtil.loadPrefs(PrefsUtil.java:44)
+	at com.blogspot.fravalle.ponf.PonfMain.main(PonfMain.java:18)
+[SOLUTION]:
+Missing crimson library in classpath

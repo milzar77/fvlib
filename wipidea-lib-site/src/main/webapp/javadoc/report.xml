@@ -1,0 +1,1541 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="com.l2fprod.gui.plaf.skin">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.bl">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>2</Ce>
+                <A>0</A>
+                <I>0.67</I>
+                <D>0.33</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="ModelKey.java">
+                    com.blogspot.fravalle.lib.bl.ModelKey
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.bl.beans</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.bl.beans">
+            <Stats>
+                <TotalClasses>21</TotalClasses>
+                <ConcreteClasses>8</ConcreteClasses>
+                <AbstractClasses>13</AbstractClasses>
+                <Ca>4</Ca>
+                <Ce>12</Ce>
+                <A>0.62</A>
+                <I>0.75</I>
+                <D>0.37</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="ADataHook.java">
+                    com.blogspot.fravalle.lib.bl.beans.ADataHook
+                </Class>
+                <Class sourceFile="AModel.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModel
+                </Class>
+                <Class sourceFile="AModelBase.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelBase
+                </Class>
+                <Class sourceFile="AModelBase.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelBase$APrimitive
+                </Class>
+                <Class sourceFile="AModelBase.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelBase$IPrimitive
+                </Class>
+                <Class sourceFile="AModelComplex.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelComplex
+                </Class>
+                <Class sourceFile="AModelPlain.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelPlain
+                </Class>
+                <Class sourceFile="AModelRecord.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelRecord
+                </Class>
+                <Class sourceFile="AModelSimple.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelSimple
+                </Class>
+                <Class sourceFile="IDataHook.java">
+                    com.blogspot.fravalle.lib.bl.beans.IDataHook
+                </Class>
+                <Class sourceFile="IModel.java">
+                    com.blogspot.fravalle.lib.bl.beans.IModel
+                </Class>
+                <Class sourceFile="IModelList.java">
+                    com.blogspot.fravalle.lib.bl.beans.IModelList
+                </Class>
+                <Class sourceFile="IModelRecord.java">
+                    com.blogspot.fravalle.lib.bl.beans.IModelRecord
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="AModel.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModel$1
+                </Class>
+                <Class sourceFile="AModelBase.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelBase$1
+                </Class>
+                <Class sourceFile="AModelBase.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelBase$Primitive
+                </Class>
+                <Class sourceFile="AModelPlain.java">
+                    com.blogspot.fravalle.lib.bl.beans.AModelPlain$1
+                </Class>
+                <Class sourceFile="DataHook.java">
+                    com.blogspot.fravalle.lib.bl.beans.DataHook
+                </Class>
+                <Class sourceFile="ModelList.java">
+                    com.blogspot.fravalle.lib.bl.beans.ModelList
+                </Class>
+                <Class sourceFile="TestModel.java">
+                    com.blogspot.fravalle.lib.bl.beans.TestModel
+                </Class>
+                <Class sourceFile="TreeNodeBean.java">
+                    com.blogspot.fravalle.lib.bl.beans.TreeNodeBean
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.bl</Package>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>com.blogspot.fravalle.util</Package>
+                <Package>java.beans</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.lang.reflect</Package>
+                <Package>java.sql</Package>
+                <Package>java.text</Package>
+                <Package>java.util</Package>
+                <Package>java.util.logging</Package>
+                <Package>javax.swing.tree</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.bl.business</Package>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.bl.business">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>9</Ce>
+                <A>0.5</A>
+                <I>0.9</I>
+                <D>0.4</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="ExternalConnection.java">
+                    com.blogspot.fravalle.lib.bl.business.ExternalConnection
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="BeanManager.java">
+                    com.blogspot.fravalle.lib.bl.business.BeanManager
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.bl.beans</Package>
+                <Package>com.blogspot.fravalle.lib.bl.business.exceptions</Package>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>java.beans</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.bl.business.exceptions">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>4</Ca>
+                <Ce>1</Ce>
+                <A>0</A>
+                <I>0.2</I>
+                <D>0.8</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="FrameworkDatabaseException.java">
+                    com.blogspot.fravalle.lib.bl.business.exceptions.FrameworkDatabaseException
+                </Class>
+                <Class sourceFile="FrameworkFatalException.java">
+                    com.blogspot.fravalle.lib.bl.business.exceptions.FrameworkFatalException
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.lang</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.bl.business</Package>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.data.csv">
+            <Stats>
+                <TotalClasses>5</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>6</Ce>
+                <A>0.2</A>
+                <I>1</I>
+                <D>0.2</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Csv.java">
+                    com.blogspot.fravalle.lib.data.csv.Csv
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="CsvAdapter.java">
+                    com.blogspot.fravalle.lib.data.csv.CsvAdapter
+                </Class>
+                <Class sourceFile="CsvControlImport.java">
+                    com.blogspot.fravalle.lib.data.csv.CsvControlImport
+                </Class>
+                <Class sourceFile="CsvExport.java">
+                    com.blogspot.fravalle.lib.data.csv.CsvExport
+                </Class>
+                <Class sourceFile="CsvImport.java">
+                    com.blogspot.fravalle.lib.data.csv.CsvImport
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.sql</Package>
+                <Package>java.util</Package>
+                <Package>java.util.logging</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.data.db.pooling">
+            <Stats>
+                <TotalClasses>3</TotalClasses>
+                <ConcreteClasses>3</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>4</Ce>
+                <A>0</A>
+                <I>0.8</I>
+                <D>0.2</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="ConnectionPool.java">
+                    com.blogspot.fravalle.lib.data.db.pooling.ConnectionPool
+                </Class>
+                <Class sourceFile="LogWriter.java">
+                    com.blogspot.fravalle.lib.data.db.pooling.LogWriter
+                </Class>
+                <Class sourceFile="PoolManager.java">
+                    com.blogspot.fravalle.lib.data.db.pooling.PoolManager
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.sql</Package>
+                <Package>java.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.data.sql">
+            <Stats>
+                <TotalClasses>9</TotalClasses>
+                <ConcreteClasses>6</ConcreteClasses>
+                <AbstractClasses>3</AbstractClasses>
+                <Ca>3</Ca>
+                <Ce>16</Ce>
+                <A>0.33</A>
+                <I>0.84</I>
+                <D>0.18</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="ABaseManager.java">
+                    com.blogspot.fravalle.lib.data.sql.ABaseManager
+                </Class>
+                <Class sourceFile="DatabaseManager.java">
+                    com.blogspot.fravalle.lib.data.sql.DatabaseManager
+                </Class>
+                <Class sourceFile="IBaseManager.java">
+                    com.blogspot.fravalle.lib.data.sql.IBaseManager
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="DataConnection.java">
+                    com.blogspot.fravalle.lib.data.sql.DataConnection
+                </Class>
+                <Class sourceFile="JdbcConnectionPool.java">
+                    com.blogspot.fravalle.lib.data.sql.DatabaseConfigurator
+                </Class>
+                <Class sourceFile="JdbcConnection.java">
+                    com.blogspot.fravalle.lib.data.sql.JdbcConnection
+                </Class>
+                <Class sourceFile="JdbcConnectionPool.java">
+                    com.blogspot.fravalle.lib.data.sql.JdbcConnectionPool
+                </Class>
+                <Class sourceFile="SQLSelect.java">
+                    com.blogspot.fravalle.lib.data.sql.SQLSelect
+                </Class>
+                <Class sourceFile="SearchConditions.java">
+                    com.blogspot.fravalle.lib.data.sql.SearchConditions
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.bl.beans</Package>
+                <Package>com.blogspot.fravalle.lib.bl.business.exceptions</Package>
+                <Package>com.blogspot.fravalle.lib.data.db.pooling</Package>
+                <Package>com.blogspot.fravalle.lib.data.xml</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>com.blogspot.fravalle.util</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.net</Package>
+                <Package>java.sql</Package>
+                <Package>java.text</Package>
+                <Package>java.util</Package>
+                <Package>java.util.logging</Package>
+                <Package>javax.swing</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.bl.business</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.data.xml">
+            <Stats>
+                <TotalClasses>8</TotalClasses>
+                <ConcreteClasses>6</ConcreteClasses>
+                <AbstractClasses>2</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>12</Ce>
+                <A>0.25</A>
+                <I>0.86</I>
+                <D>0.11</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="XmlConstants.java">
+                    com.blogspot.fravalle.lib.data.xml.XmlConstants
+                </Class>
+                <Class sourceFile="XmlUtils.java">
+                    com.blogspot.fravalle.lib.data.xml.XmlUtils
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="SaxApplicationException.java">
+                    com.blogspot.fravalle.lib.data.xml.SaxApplicationException
+                </Class>
+                <Class sourceFile="XmlExport.java">
+                    com.blogspot.fravalle.lib.data.xml.XmlExport
+                </Class>
+                <Class sourceFile="XmlImport.java">
+                    com.blogspot.fravalle.lib.data.xml.XmlImport
+                </Class>
+                <Class sourceFile="XmlReader.java">
+                    com.blogspot.fravalle.lib.data.xml.XmlReader
+                </Class>
+                <Class sourceFile="XmlSource.java">
+                    com.blogspot.fravalle.lib.data.xml.XmlSource
+                </Class>
+                <Class sourceFile="XmlTransformer.java">
+                    com.blogspot.fravalle.lib.data.xml.XmlTransformer
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>com.blogspot.fravalle.util</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.sql</Package>
+                <Package>java.util</Package>
+                <Package>java.util.logging</Package>
+                <Package>javax.xml.parsers</Package>
+                <Package>javax.xml.transform</Package>
+                <Package>javax.xml.transform.stream</Package>
+                <Package>org.w3c.dom</Package>
+                <Package>org.xml.sax</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.gui">
+            <Stats>
+                <TotalClasses>113</TotalClasses>
+                <ConcreteClasses>105</ConcreteClasses>
+                <AbstractClasses>8</AbstractClasses>
+                <Ca>5</Ca>
+                <Ce>30</Ce>
+                <A>0.07</A>
+                <I>0.86</I>
+                <D>0.07</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI
+                </Class>
+                <Class sourceFile="ABaseControllerUI.java">
+                    com.blogspot.fravalle.lib.gui.ABaseControllerUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JBasicUI
+                </Class>
+                <Class sourceFile="ATreeNodableBean.java">
+                    com.blogspot.fravalle.lib.gui.ATreeNodableBean
+                </Class>
+                <Class sourceFile="AWindow.java">
+                    com.blogspot.fravalle.lib.gui.AWindow
+                </Class>
+                <Class sourceFile="IShortcutAction.java">
+                    com.blogspot.fravalle.lib.gui.IShortcutAction
+                </Class>
+                <Class sourceFile="IWindow.java">
+                    com.blogspot.fravalle.lib.gui.IWindow
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$1
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$10
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$2
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$3
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$4
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$5
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$6
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$7
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$8
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$9
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$JButtonUI
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$JComboUI
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$JComboUI$ComboItemUI
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$JItemGroupUI
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$JLabelUI
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$JRadioUI
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$JTextAreaUI
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$JTextFieldUI
+                </Class>
+                <Class sourceFile="AAppletUI.java">
+                    com.blogspot.fravalle.lib.gui.AAppletUI$JTextMaskUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$1
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$10
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$11
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$12
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$13
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$14
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$15
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$2
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$3
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$4
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$5
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$6
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$7
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$8
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$9
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$ContentUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JActivationPanelUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JButtonUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JComboUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JComboUI$ComboItemUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JItemGroupUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JLabelUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JRadioUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JTextAreaUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JTextFieldUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$JTextMaskUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$TextContentUI
+                </Class>
+                <Class sourceFile="AControlsUI.java">
+                    com.blogspot.fravalle.lib.gui.AControlsUI$XmlUI
+                </Class>
+                <Class sourceFile="AWindow.java">
+                    com.blogspot.fravalle.lib.gui.AWindow$1
+                </Class>
+                <Class sourceFile="AWindow.java">
+                    com.blogspot.fravalle.lib.gui.AWindow$2
+                </Class>
+                <Class sourceFile="AWindow.java">
+                    com.blogspot.fravalle.lib.gui.AWindow$Jb1ActionListener
+                </Class>
+                <Class sourceFile="AWindow.java">
+                    com.blogspot.fravalle.lib.gui.AWindow$Jb2ActionListener
+                </Class>
+                <Class sourceFile="AWindow.java">
+                    com.blogspot.fravalle.lib.gui.AWindow$Popitm1ActionListener
+                </Class>
+                <Class sourceFile="AWindow.java">
+                    com.blogspot.fravalle.lib.gui.AWindow$PopupListener
+                </Class>
+                <Class sourceFile="GuiManager.java">
+                    com.blogspot.fravalle.lib.gui.GuiManager
+                </Class>
+                <Class sourceFile="GuiManager.java">
+                    com.blogspot.fravalle.lib.gui.GuiManager$1
+                </Class>
+                <Class sourceFile="GuiManager.java">
+                    com.blogspot.fravalle.lib.gui.GuiManager$2
+                </Class>
+                <Class sourceFile="GuiManager.java">
+                    com.blogspot.fravalle.lib.gui.GuiManager$3
+                </Class>
+                <Class sourceFile="GuiManager.java">
+                    com.blogspot.fravalle.lib.gui.GuiManager$4
+                </Class>
+                <Class sourceFile="GuiManager.java">
+                    com.blogspot.fravalle.lib.gui.GuiManager$MyNode
+                </Class>
+                <Class sourceFile="OptionPropertiesUI.java">
+                    com.blogspot.fravalle.lib.gui.OptionPropertiesUI
+                </Class>
+                <Class sourceFile="OptionPropertiesUI.java">
+                    com.blogspot.fravalle.lib.gui.OptionPropertiesUI$1
+                </Class>
+                <Class sourceFile="OptionPropertiesUI.java">
+                    com.blogspot.fravalle.lib.gui.OptionPropertiesUI$2
+                </Class>
+                <Class sourceFile="OptionPropertiesUI.java">
+                    com.blogspot.fravalle.lib.gui.OptionPropertiesUI$3
+                </Class>
+                <Class sourceFile="ProgressMonitorUI.java">
+                    com.blogspot.fravalle.lib.gui.PovrayObject
+                </Class>
+                <Class sourceFile="ProgressMonitorUI.java">
+                    com.blogspot.fravalle.lib.gui.ProgressMonitorUI
+                </Class>
+                <Class sourceFile="ProgressMonitorUI.java">
+                    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$1
+                </Class>
+                <Class sourceFile="ProgressMonitorUI.java">
+                    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$2
+                </Class>
+                <Class sourceFile="ProgressMonitorUI.java">
+                    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$3
+                </Class>
+                <Class sourceFile="ProgressMonitorUI.java">
+                    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$4
+                </Class>
+                <Class sourceFile="ProgressMonitorUI.java">
+                    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$5
+                </Class>
+                <Class sourceFile="ProgressMonitorUI.java">
+                    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$6
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$1
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$10
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$11
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$2
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$3
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$4
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$5
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$6
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$7
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$8
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$9
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$JTreeUI
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$JTreeUI$TreeHeader
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$ScrollerSource
+                </Class>
+                <Class sourceFile="ScrollableRecordUI.java">
+                    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$ScrollerUI
+                </Class>
+                <Class sourceFile="ScrollerInfo.java">
+                    com.blogspot.fravalle.lib.gui.ScrollerInfo
+                </Class>
+                <Class sourceFile="ShortcutAction.java">
+                    com.blogspot.fravalle.lib.gui.ShortcutAction
+                </Class>
+                <Class sourceFile="SideBar.java">
+                    com.blogspot.fravalle.lib.gui.SideBar
+                </Class>
+                <Class sourceFile="SideBar.java">
+                    com.blogspot.fravalle.lib.gui.SideBar$1
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI$1
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI$2
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI$3
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI$4
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI$5
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI$6
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI$JButtonUI
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI$ScrollNavigatorPane
+                </Class>
+                <Class sourceFile="SideBarUI.java">
+                    com.blogspot.fravalle.lib.gui.SideBarUI$SidebarGroup
+                </Class>
+                <Class sourceFile="SidebarShortcut.java">
+                    com.blogspot.fravalle.lib.gui.SidebarShortcut
+                </Class>
+                <Class sourceFile="SidebarShortcut.java">
+                    com.blogspot.fravalle.lib.gui.SidebarShortcut$1
+                </Class>
+                <Class sourceFile="SidebarShortcut.java">
+                    com.blogspot.fravalle.lib.gui.SidebarShortcut$ThreadLauncher
+                </Class>
+                <Class sourceFile="WindowHook.java">
+                    com.blogspot.fravalle.lib.gui.WindowHook
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.l2fprod.gui.plaf.skin</Package>
+                <Package>com.blogspot.fravalle.lib.bl.beans</Package>
+                <Package>com.blogspot.fravalle.lib.bl.business</Package>
+                <Package>com.blogspot.fravalle.lib.bl.business.exceptions</Package>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.data.xml</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+                <Package>com.blogspot.fravalle.lib.gui.menu</Package>
+                <Package>com.blogspot.fravalle.lib.gui.rendering</Package>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>com.blogspot.fravalle.util</Package>
+                <Package>com.blogspot.fravalle.util.text</Package>
+                <Package>java.awt</Package>
+                <Package>java.awt.event</Package>
+                <Package>java.beans</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.lang.reflect</Package>
+                <Package>java.net</Package>
+                <Package>java.sql</Package>
+                <Package>java.text</Package>
+                <Package>java.util</Package>
+                <Package>java.util.logging</Package>
+                <Package>javax.swing</Package>
+                <Package>javax.swing.border</Package>
+                <Package>javax.swing.event</Package>
+                <Package>javax.swing.plaf.basic</Package>
+                <Package>javax.swing.text</Package>
+                <Package>javax.swing.tree</Package>
+                <Package>org.w3c.dom</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.bl.business</Package>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+                <Package>com.blogspot.fravalle.lib.gui.menu</Package>
+                <Package>com.blogspot.fravalle.lib.gui.rendering</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.gui.mdi">
+            <Stats>
+                <TotalClasses>14</TotalClasses>
+                <ConcreteClasses>10</ConcreteClasses>
+                <AbstractClasses>4</AbstractClasses>
+                <Ca>3</Ca>
+                <Ce>20</Ce>
+                <A>0.29</A>
+                <I>0.87</I>
+                <D>0.16</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="AMDIApplet.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet
+                </Class>
+                <Class sourceFile="AMDIFrame.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIFrame
+                </Class>
+                <Class sourceFile="IMDIApplet.java">
+                    com.blogspot.fravalle.lib.gui.mdi.IMDIApplet
+                </Class>
+                <Class sourceFile="MDIApplication.java">
+                    com.blogspot.fravalle.lib.gui.mdi.MDIApplication
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="AMDIApplet.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$1
+                </Class>
+                <Class sourceFile="AMDIApplet.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$2
+                </Class>
+                <Class sourceFile="AMDIApplet.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$3
+                </Class>
+                <Class sourceFile="AMDIApplet.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$4
+                </Class>
+                <Class sourceFile="AMDIApplet.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$5
+                </Class>
+                <Class sourceFile="AMDIApplet.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$6
+                </Class>
+                <Class sourceFile="AMDIFrame.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIFrame$1
+                </Class>
+                <Class sourceFile="AMDIFrame.java">
+                    com.blogspot.fravalle.lib.gui.mdi.AMDIFrame$2
+                </Class>
+                <Class sourceFile="MDIDesktop.java">
+                    com.blogspot.fravalle.lib.gui.mdi.MDIDesktop
+                </Class>
+                <Class sourceFile="MDIFrame.java">
+                    com.blogspot.fravalle.lib.gui.mdi.MDIFrame
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.bl.beans</Package>
+                <Package>com.blogspot.fravalle.lib.bl.business.exceptions</Package>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>com.blogspot.fravalle.util</Package>
+                <Package>com.blogspot.fravalle.util.gfx</Package>
+                <Package>com.blogspot.fravalle.util.text</Package>
+                <Package>java.awt</Package>
+                <Package>java.awt.event</Package>
+                <Package>java.beans</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.net</Package>
+                <Package>java.util.logging</Package>
+                <Package>javax.imageio</Package>
+                <Package>javax.swing</Package>
+                <Package>javax.swing.border</Package>
+                <Package>javax.swing.event</Package>
+                <Package>javax.swing.text</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.gui.menu</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.gui.menu">
+            <Stats>
+                <TotalClasses>18</TotalClasses>
+                <ConcreteClasses>17</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>15</Ce>
+                <A>0.06</A>
+                <I>0.94</I>
+                <D>0.01</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$1
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$10
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$11
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$12
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$13
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$14
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$2
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$3
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$4
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$5
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$6
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$7
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$8
+                </Class>
+                <Class sourceFile="AWindowMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$9
+                </Class>
+                <Class sourceFile="DefaultMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.DefaultMenu
+                </Class>
+                <Class sourceFile="DefaultMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.DefaultMenu$1
+                </Class>
+                <Class sourceFile="DefaultMenu.java">
+                    com.blogspot.fravalle.lib.gui.menu.DefaultMenu$2
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>com.blogspot.fravalle.util</Package>
+                <Package>com.blogspot.fravalle.util.filesystem</Package>
+                <Package>java.awt</Package>
+                <Package>java.awt.event</Package>
+                <Package>java.beans</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.net</Package>
+                <Package>java.util</Package>
+                <Package>java.util.logging</Package>
+                <Package>javax.swing</Package>
+                <Package>javax.swing.event</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.gui.rendering">
+            <Stats>
+                <TotalClasses>7</TotalClasses>
+                <ConcreteClasses>5</ConcreteClasses>
+                <AbstractClasses>2</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>13</Ce>
+                <A>0.29</A>
+                <I>0.93</I>
+                <D>0.21</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="AXmlUi.java">
+                    com.blogspot.fravalle.lib.gui.rendering.AXmlUi
+                </Class>
+                <Class sourceFile="IXmlUi.java">
+                    com.blogspot.fravalle.lib.gui.rendering.IXmlUi
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="JXmlUI.java">
+                    com.blogspot.fravalle.lib.gui.rendering.JXmlUI
+                </Class>
+                <Class sourceFile="JXmlUI.java">
+                    com.blogspot.fravalle.lib.gui.rendering.JXmlUI$1
+                </Class>
+                <Class sourceFile="JXmlUI.java">
+                    com.blogspot.fravalle.lib.gui.rendering.JXmlUI$2
+                </Class>
+                <Class sourceFile="MyComboItemUI.java">
+                    com.blogspot.fravalle.lib.gui.rendering.MyComboItemUI
+                </Class>
+                <Class sourceFile="XmlGroup.java">
+                    com.blogspot.fravalle.lib.gui.rendering.XmlGroup
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>java.awt</Package>
+                <Package>java.awt.event</Package>
+                <Package>java.beans</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+                <Package>java.util.logging</Package>
+                <Package>javax.swing</Package>
+                <Package>javax.swing.event</Package>
+                <Package>javax.swing.text</Package>
+                <Package>org.w3c.dom</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.lib.monitor">
+            <Stats>
+                <TotalClasses>8</TotalClasses>
+                <ConcreteClasses>3</ConcreteClasses>
+                <AbstractClasses>5</AbstractClasses>
+                <Ca>12</Ca>
+                <Ce>7</Ce>
+                <A>0.62</A>
+                <I>0.37</I>
+                <D>0.01</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="ErrorCodes.java">
+                    com.blogspot.fravalle.lib.monitor.ErrorCodes
+                </Class>
+                <Class sourceFile="IErrorCodes.java">
+                    com.blogspot.fravalle.lib.monitor.IErrorCodes
+                </Class>
+                <Class sourceFile="ILoggableObject.java">
+                    com.blogspot.fravalle.lib.monitor.ILoggableObject
+                </Class>
+                <Class sourceFile="IMonitor.java">
+                    com.blogspot.fravalle.lib.monitor.IMonitor
+                </Class>
+                <Class sourceFile="MainLogger.java">
+                    com.blogspot.fravalle.lib.monitor.MainLogger
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="ApplicationMonitor.java">
+                    com.blogspot.fravalle.lib.monitor.ApplicationMonitor
+                </Class>
+                <Class sourceFile="MainFormatter.java">
+                    com.blogspot.fravalle.lib.monitor.MainFormatter
+                </Class>
+                <Class sourceFile="Monitor.java">
+                    com.blogspot.fravalle.lib.monitor.Monitor
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.security</Package>
+                <Package>java.text</Package>
+                <Package>java.util</Package>
+                <Package>java.util.logging</Package>
+                <Package>sun.security.action</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.bl.beans</Package>
+                <Package>com.blogspot.fravalle.lib.bl.business</Package>
+                <Package>com.blogspot.fravalle.lib.data.csv</Package>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.data.xml</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+                <Package>com.blogspot.fravalle.lib.gui.menu</Package>
+                <Package>com.blogspot.fravalle.lib.gui.rendering</Package>
+                <Package>com.blogspot.fravalle.util</Package>
+                <Package>com.blogspot.fravalle.util.filesystem</Package>
+                <Package>com.blogspot.fravalle.util.text</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.util">
+            <Stats>
+                <TotalClasses>6</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>5</AbstractClasses>
+                <Ca>6</Ca>
+                <Ce>6</Ce>
+                <A>0.83</A>
+                <I>0.5</I>
+                <D>0.33</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="APatcher.java">
+                    com.blogspot.fravalle.util.APatcher
+                </Class>
+                <Class sourceFile="AResource.java">
+                    com.blogspot.fravalle.util.AResource
+                </Class>
+                <Class sourceFile="Constants.java">
+                    com.blogspot.fravalle.util.Constants
+                </Class>
+                <Class sourceFile="SettingRes.java">
+                    com.blogspot.fravalle.util.SettingRes
+                </Class>
+                <Class sourceFile="UIRes.java">
+                    com.blogspot.fravalle.util.UIRes
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="FilteredProperties.java">
+                    com.blogspot.fravalle.util.FilteredProperties
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.net</Package>
+                <Package>java.util</Package>
+                <Package>java.util.logging</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.bl.beans</Package>
+                <Package>com.blogspot.fravalle.lib.data.sql</Package>
+                <Package>com.blogspot.fravalle.lib.data.xml</Package>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+                <Package>com.blogspot.fravalle.lib.gui.menu</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.util.filesystem">
+            <Stats>
+                <TotalClasses>5</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>8</Ce>
+                <A>0.2</A>
+                <I>0.89</I>
+                <D>0.09</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="FileSystemReader.java">
+                    com.blogspot.fravalle.util.filesystem.FileSystemReader
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="CachedFile.java">
+                    com.blogspot.fravalle.util.filesystem.CachedFile
+                </Class>
+                <Class sourceFile="DirectoryScanner.java">
+                    com.blogspot.fravalle.util.filesystem.DirectoryScanner
+                </Class>
+                <Class sourceFile="JarManager.java">
+                    com.blogspot.fravalle.util.filesystem.JarManager
+                </Class>
+                <Class sourceFile="JarReader.java">
+                    com.blogspot.fravalle.util.filesystem.JarReader
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.net</Package>
+                <Package>java.util</Package>
+                <Package>java.util.jar</Package>
+                <Package>java.util.logging</Package>
+                <Package>javax.swing</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.gui.menu</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.util.gfx">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>0</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>4</Ce>
+                <A>1</A>
+                <I>0.8</I>
+                <D>0.8</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Drawer.java">
+                    com.blogspot.fravalle.util.gfx.Drawer
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.awt</Package>
+                <Package>java.awt.geom</Package>
+                <Package>java.lang</Package>
+                <Package>javax.swing</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.util.text">
+            <Stats>
+                <TotalClasses>3</TotalClasses>
+                <ConcreteClasses>3</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>6</Ce>
+                <A>0</A>
+                <I>0.75</I>
+                <D>0.25</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Configuration.java">
+                    com.blogspot.fravalle.util.text.Configuration
+                </Class>
+                <Class sourceFile="Text.java">
+                    com.blogspot.fravalle.util.text.Text
+                </Class>
+                <Class sourceFile="TextTest.java">
+                    com.blogspot.fravalle.util.text.TextTest
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.blogspot.fravalle.lib.monitor</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+                <Package>junit.framework</Package>
+                <Package>junit.textui</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.blogspot.fravalle.lib.gui</Package>
+                <Package>com.blogspot.fravalle.lib.gui.mdi</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.blogspot.fravalle.util.web.html">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>6</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Hyperactive.java">
+                    com.blogspot.fravalle.util.web.html.Hyperactive
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.net</Package>
+                <Package>javax.swing</Package>
+                <Package>javax.swing.event</Package>
+                <Package>javax.swing.text.html</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="java.awt">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.awt.event">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.awt.geom">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.beans">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.io">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang.reflect">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.net">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.security">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.sql">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.text">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util.jar">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util.logging">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.imageio">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing.border">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing.event">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing.plaf.basic">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing.text">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing.text.html">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing.tree">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.xml.parsers">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.xml.transform">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.xml.transform.stream">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="junit.framework">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="junit.textui">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.w3c.dom">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.xml.sax">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="sun.security.action">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+    </Packages>
+
+    <Cycles>
+        <Package Name="com.blogspot.fravalle.lib.bl.business">
+            <Package>com.blogspot.fravalle.lib.data.sql</Package>
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+            <Package>com.blogspot.fravalle.lib.gui.rendering</Package>
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+        </Package>
+
+        <Package Name="com.blogspot.fravalle.lib.data.sql">
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+            <Package>com.blogspot.fravalle.lib.gui.rendering</Package>
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+        </Package>
+
+        <Package Name="com.blogspot.fravalle.lib.gui">
+            <Package>com.blogspot.fravalle.lib.gui.rendering</Package>
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+        </Package>
+
+        <Package Name="com.blogspot.fravalle.lib.gui.mdi">
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+            <Package>com.blogspot.fravalle.lib.gui.rendering</Package>
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+        </Package>
+
+        <Package Name="com.blogspot.fravalle.lib.gui.menu">
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+            <Package>com.blogspot.fravalle.lib.gui.rendering</Package>
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+        </Package>
+
+        <Package Name="com.blogspot.fravalle.lib.gui.rendering">
+            <Package>com.blogspot.fravalle.lib.gui</Package>
+            <Package>com.blogspot.fravalle.lib.gui.rendering</Package>
+        </Package>
+
+    </Cycles>
+</JDepend>

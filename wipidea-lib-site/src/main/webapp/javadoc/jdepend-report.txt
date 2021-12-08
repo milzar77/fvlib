@@ -1,0 +1,1138 @@
+
+--------------------------------------------------
+- Package: com.l2fprod.gui.plaf.skin
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.bl
+--------------------------------------------------
+
+Stats:
+    Total Classes: 1
+    Concrete Classes: 1
+    Abstract Classes: 0
+
+    Ca: 1
+    Ce: 2
+
+    A: 0
+    I: 0,67
+    D: 0,33
+
+Abstract Classes:
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.bl.ModelKey
+
+Depends Upon:
+    java.lang
+    java.util
+
+Used By:
+    com.blogspot.fravalle.lib.bl.beans
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.bl.beans
+--------------------------------------------------
+
+Stats:
+    Total Classes: 21
+    Concrete Classes: 8
+    Abstract Classes: 13
+
+    Ca: 4
+    Ce: 12
+
+    A: 0,62
+    I: 0,75
+    D: 0,37
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.bl.beans.ADataHook
+    com.blogspot.fravalle.lib.bl.beans.AModel
+    com.blogspot.fravalle.lib.bl.beans.AModelBase
+    com.blogspot.fravalle.lib.bl.beans.AModelBase$APrimitive
+    com.blogspot.fravalle.lib.bl.beans.AModelBase$IPrimitive
+    com.blogspot.fravalle.lib.bl.beans.AModelComplex
+    com.blogspot.fravalle.lib.bl.beans.AModelPlain
+    com.blogspot.fravalle.lib.bl.beans.AModelRecord
+    com.blogspot.fravalle.lib.bl.beans.AModelSimple
+    com.blogspot.fravalle.lib.bl.beans.IDataHook
+    com.blogspot.fravalle.lib.bl.beans.IModel
+    com.blogspot.fravalle.lib.bl.beans.IModelList
+    com.blogspot.fravalle.lib.bl.beans.IModelRecord
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.bl.beans.AModel$1
+    com.blogspot.fravalle.lib.bl.beans.AModelBase$1
+    com.blogspot.fravalle.lib.bl.beans.AModelBase$Primitive
+    com.blogspot.fravalle.lib.bl.beans.AModelPlain$1
+    com.blogspot.fravalle.lib.bl.beans.DataHook
+    com.blogspot.fravalle.lib.bl.beans.ModelList
+    com.blogspot.fravalle.lib.bl.beans.TestModel
+    com.blogspot.fravalle.lib.bl.beans.TreeNodeBean
+
+Depends Upon:
+    com.blogspot.fravalle.lib.bl
+    com.blogspot.fravalle.lib.monitor
+    com.blogspot.fravalle.util
+    java.beans
+    java.io
+    java.lang
+    java.lang.reflect
+    java.sql
+    java.text
+    java.util
+    java.util.logging
+    javax.swing.tree
+
+Used By:
+    com.blogspot.fravalle.lib.bl.business
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.gui.mdi
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.bl.business
+--------------------------------------------------
+
+Stats:
+    Total Classes: 2
+    Concrete Classes: 1
+    Abstract Classes: 1
+
+    Ca: 1
+    Ce: 9
+
+    A: 0,5
+    I: 0,9
+    D: 0,4
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.bl.business.ExternalConnection
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.bl.business.BeanManager
+
+Depends Upon:
+    com.blogspot.fravalle.lib.bl.beans
+    com.blogspot.fravalle.lib.bl.business.exceptions
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.monitor
+    java.beans
+    java.io
+    java.lang
+    java.util
+
+Used By:
+    com.blogspot.fravalle.lib.gui
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.bl.business.exceptions
+--------------------------------------------------
+
+Stats:
+    Total Classes: 2
+    Concrete Classes: 2
+    Abstract Classes: 0
+
+    Ca: 4
+    Ce: 1
+
+    A: 0
+    I: 0,2
+    D: 0,8
+
+Abstract Classes:
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.bl.business.exceptions.FrameworkDatabaseException
+    com.blogspot.fravalle.lib.bl.business.exceptions.FrameworkFatalException
+
+Depends Upon:
+    java.lang
+
+Used By:
+    com.blogspot.fravalle.lib.bl.business
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.gui.mdi
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.data.csv
+--------------------------------------------------
+
+Stats:
+    Total Classes: 5
+    Concrete Classes: 4
+    Abstract Classes: 1
+
+    Ca: 0
+    Ce: 6
+
+    A: 0,2
+    I: 1
+    D: 0,2
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.data.csv.Csv
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.data.csv.CsvAdapter
+    com.blogspot.fravalle.lib.data.csv.CsvControlImport
+    com.blogspot.fravalle.lib.data.csv.CsvExport
+    com.blogspot.fravalle.lib.data.csv.CsvImport
+
+Depends Upon:
+    com.blogspot.fravalle.lib.monitor
+    java.io
+    java.lang
+    java.sql
+    java.util
+    java.util.logging
+
+Used By:
+    Not used by any packages.
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.data.db.pooling
+--------------------------------------------------
+
+Stats:
+    Total Classes: 3
+    Concrete Classes: 3
+    Abstract Classes: 0
+
+    Ca: 1
+    Ce: 4
+
+    A: 0
+    I: 0,8
+    D: 0,2
+
+Abstract Classes:
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.data.db.pooling.ConnectionPool
+    com.blogspot.fravalle.lib.data.db.pooling.LogWriter
+    com.blogspot.fravalle.lib.data.db.pooling.PoolManager
+
+Depends Upon:
+    java.io
+    java.lang
+    java.sql
+    java.util
+
+Used By:
+    com.blogspot.fravalle.lib.data.sql
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.data.sql
+--------------------------------------------------
+
+Stats:
+    Total Classes: 9
+    Concrete Classes: 6
+    Abstract Classes: 3
+
+    Ca: 3
+    Ce: 16
+
+    A: 0,33
+    I: 0,84
+    D: 0,18
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.data.sql.ABaseManager
+    com.blogspot.fravalle.lib.data.sql.DatabaseManager
+    com.blogspot.fravalle.lib.data.sql.IBaseManager
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.data.sql.DataConnection
+    com.blogspot.fravalle.lib.data.sql.DatabaseConfigurator
+    com.blogspot.fravalle.lib.data.sql.JdbcConnection
+    com.blogspot.fravalle.lib.data.sql.JdbcConnectionPool
+    com.blogspot.fravalle.lib.data.sql.SQLSelect
+    com.blogspot.fravalle.lib.data.sql.SearchConditions
+
+Depends Upon:
+    com.blogspot.fravalle.lib.bl.beans
+    com.blogspot.fravalle.lib.bl.business.exceptions
+    com.blogspot.fravalle.lib.data.db.pooling
+    com.blogspot.fravalle.lib.data.xml
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.gui.mdi
+    com.blogspot.fravalle.lib.monitor
+    com.blogspot.fravalle.util
+    java.io
+    java.lang
+    java.net
+    java.sql
+    java.text
+    java.util
+    java.util.logging
+    javax.swing
+
+Used By:
+    com.blogspot.fravalle.lib.bl.business
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.gui.mdi
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.data.xml
+--------------------------------------------------
+
+Stats:
+    Total Classes: 8
+    Concrete Classes: 6
+    Abstract Classes: 2
+
+    Ca: 2
+    Ce: 12
+
+    A: 0,25
+    I: 0,86
+    D: 0,11
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.data.xml.XmlConstants
+    com.blogspot.fravalle.lib.data.xml.XmlUtils
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.data.xml.SaxApplicationException
+    com.blogspot.fravalle.lib.data.xml.XmlExport
+    com.blogspot.fravalle.lib.data.xml.XmlImport
+    com.blogspot.fravalle.lib.data.xml.XmlReader
+    com.blogspot.fravalle.lib.data.xml.XmlSource
+    com.blogspot.fravalle.lib.data.xml.XmlTransformer
+
+Depends Upon:
+    com.blogspot.fravalle.lib.monitor
+    com.blogspot.fravalle.util
+    java.io
+    java.lang
+    java.sql
+    java.util
+    java.util.logging
+    javax.xml.parsers
+    javax.xml.transform
+    javax.xml.transform.stream
+    org.w3c.dom
+    org.xml.sax
+
+Used By:
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.gui
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.gui
+--------------------------------------------------
+
+Stats:
+    Total Classes: 113
+    Concrete Classes: 105
+    Abstract Classes: 8
+
+    Ca: 5
+    Ce: 30
+
+    A: 0,07
+    I: 0,86
+    D: 0,07
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.gui.AAppletUI
+    com.blogspot.fravalle.lib.gui.ABaseControllerUI
+    com.blogspot.fravalle.lib.gui.AControlsUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JBasicUI
+    com.blogspot.fravalle.lib.gui.ATreeNodableBean
+    com.blogspot.fravalle.lib.gui.AWindow
+    com.blogspot.fravalle.lib.gui.IShortcutAction
+    com.blogspot.fravalle.lib.gui.IWindow
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.gui.AAppletUI$1
+    com.blogspot.fravalle.lib.gui.AAppletUI$10
+    com.blogspot.fravalle.lib.gui.AAppletUI$2
+    com.blogspot.fravalle.lib.gui.AAppletUI$3
+    com.blogspot.fravalle.lib.gui.AAppletUI$4
+    com.blogspot.fravalle.lib.gui.AAppletUI$5
+    com.blogspot.fravalle.lib.gui.AAppletUI$6
+    com.blogspot.fravalle.lib.gui.AAppletUI$7
+    com.blogspot.fravalle.lib.gui.AAppletUI$8
+    com.blogspot.fravalle.lib.gui.AAppletUI$9
+    com.blogspot.fravalle.lib.gui.AAppletUI$JButtonUI
+    com.blogspot.fravalle.lib.gui.AAppletUI$JComboUI
+    com.blogspot.fravalle.lib.gui.AAppletUI$JComboUI$ComboItemUI
+    com.blogspot.fravalle.lib.gui.AAppletUI$JItemGroupUI
+    com.blogspot.fravalle.lib.gui.AAppletUI$JLabelUI
+    com.blogspot.fravalle.lib.gui.AAppletUI$JRadioUI
+    com.blogspot.fravalle.lib.gui.AAppletUI$JTextAreaUI
+    com.blogspot.fravalle.lib.gui.AAppletUI$JTextFieldUI
+    com.blogspot.fravalle.lib.gui.AAppletUI$JTextMaskUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$1
+    com.blogspot.fravalle.lib.gui.AControlsUI$10
+    com.blogspot.fravalle.lib.gui.AControlsUI$11
+    com.blogspot.fravalle.lib.gui.AControlsUI$12
+    com.blogspot.fravalle.lib.gui.AControlsUI$13
+    com.blogspot.fravalle.lib.gui.AControlsUI$14
+    com.blogspot.fravalle.lib.gui.AControlsUI$15
+    com.blogspot.fravalle.lib.gui.AControlsUI$2
+    com.blogspot.fravalle.lib.gui.AControlsUI$3
+    com.blogspot.fravalle.lib.gui.AControlsUI$4
+    com.blogspot.fravalle.lib.gui.AControlsUI$5
+    com.blogspot.fravalle.lib.gui.AControlsUI$6
+    com.blogspot.fravalle.lib.gui.AControlsUI$7
+    com.blogspot.fravalle.lib.gui.AControlsUI$8
+    com.blogspot.fravalle.lib.gui.AControlsUI$9
+    com.blogspot.fravalle.lib.gui.AControlsUI$ContentUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JActivationPanelUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JButtonUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JComboUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JComboUI$ComboItemUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JItemGroupUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JLabelUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JRadioUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JTextAreaUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JTextFieldUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$JTextMaskUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$TextContentUI
+    com.blogspot.fravalle.lib.gui.AControlsUI$XmlUI
+    com.blogspot.fravalle.lib.gui.AWindow$1
+    com.blogspot.fravalle.lib.gui.AWindow$2
+    com.blogspot.fravalle.lib.gui.AWindow$Jb1ActionListener
+    com.blogspot.fravalle.lib.gui.AWindow$Jb2ActionListener
+    com.blogspot.fravalle.lib.gui.AWindow$Popitm1ActionListener
+    com.blogspot.fravalle.lib.gui.AWindow$PopupListener
+    com.blogspot.fravalle.lib.gui.GuiManager
+    com.blogspot.fravalle.lib.gui.GuiManager$1
+    com.blogspot.fravalle.lib.gui.GuiManager$2
+    com.blogspot.fravalle.lib.gui.GuiManager$3
+    com.blogspot.fravalle.lib.gui.GuiManager$4
+    com.blogspot.fravalle.lib.gui.GuiManager$MyNode
+    com.blogspot.fravalle.lib.gui.OptionPropertiesUI
+    com.blogspot.fravalle.lib.gui.OptionPropertiesUI$1
+    com.blogspot.fravalle.lib.gui.OptionPropertiesUI$2
+    com.blogspot.fravalle.lib.gui.OptionPropertiesUI$3
+    com.blogspot.fravalle.lib.gui.PovrayObject
+    com.blogspot.fravalle.lib.gui.ProgressMonitorUI
+    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$1
+    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$2
+    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$3
+    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$4
+    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$5
+    com.blogspot.fravalle.lib.gui.ProgressMonitorUI$6
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$1
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$10
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$11
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$2
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$3
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$4
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$5
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$6
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$7
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$8
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$9
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$JTreeUI
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$JTreeUI$TreeHeader
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$ScrollerSource
+    com.blogspot.fravalle.lib.gui.ScrollableRecordUI$ScrollerUI
+    com.blogspot.fravalle.lib.gui.ScrollerInfo
+    com.blogspot.fravalle.lib.gui.ShortcutAction
+    com.blogspot.fravalle.lib.gui.SideBar
+    com.blogspot.fravalle.lib.gui.SideBar$1
+    com.blogspot.fravalle.lib.gui.SideBarUI
+    com.blogspot.fravalle.lib.gui.SideBarUI$1
+    com.blogspot.fravalle.lib.gui.SideBarUI$2
+    com.blogspot.fravalle.lib.gui.SideBarUI$3
+    com.blogspot.fravalle.lib.gui.SideBarUI$4
+    com.blogspot.fravalle.lib.gui.SideBarUI$5
+    com.blogspot.fravalle.lib.gui.SideBarUI$6
+    com.blogspot.fravalle.lib.gui.SideBarUI$JButtonUI
+    com.blogspot.fravalle.lib.gui.SideBarUI$ScrollNavigatorPane
+    com.blogspot.fravalle.lib.gui.SideBarUI$SidebarGroup
+    com.blogspot.fravalle.lib.gui.SidebarShortcut
+    com.blogspot.fravalle.lib.gui.SidebarShortcut$1
+    com.blogspot.fravalle.lib.gui.SidebarShortcut$ThreadLauncher
+    com.blogspot.fravalle.lib.gui.WindowHook
+
+Depends Upon:
+    com.l2fprod.gui.plaf.skin
+    com.blogspot.fravalle.lib.bl.beans
+    com.blogspot.fravalle.lib.bl.business
+    com.blogspot.fravalle.lib.bl.business.exceptions
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.data.xml
+    com.blogspot.fravalle.lib.gui.mdi
+    com.blogspot.fravalle.lib.gui.menu
+    com.blogspot.fravalle.lib.gui.rendering
+    com.blogspot.fravalle.lib.monitor
+    com.blogspot.fravalle.util
+    com.blogspot.fravalle.util.text
+    java.awt
+    java.awt.event
+    java.beans
+    java.io
+    java.lang
+    java.lang.reflect
+    java.net
+    java.sql
+    java.text
+    java.util
+    java.util.logging
+    javax.swing
+    javax.swing.border
+    javax.swing.event
+    javax.swing.plaf.basic
+    javax.swing.text
+    javax.swing.tree
+    org.w3c.dom
+
+Used By:
+    com.blogspot.fravalle.lib.bl.business
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.gui.mdi
+    com.blogspot.fravalle.lib.gui.menu
+    com.blogspot.fravalle.lib.gui.rendering
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.gui.mdi
+--------------------------------------------------
+
+Stats:
+    Total Classes: 14
+    Concrete Classes: 10
+    Abstract Classes: 4
+
+    Ca: 3
+    Ce: 20
+
+    A: 0,29
+    I: 0,87
+    D: 0,16
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet
+    com.blogspot.fravalle.lib.gui.mdi.AMDIFrame
+    com.blogspot.fravalle.lib.gui.mdi.IMDIApplet
+    com.blogspot.fravalle.lib.gui.mdi.MDIApplication
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$1
+    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$2
+    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$3
+    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$4
+    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$5
+    com.blogspot.fravalle.lib.gui.mdi.AMDIApplet$6
+    com.blogspot.fravalle.lib.gui.mdi.AMDIFrame$1
+    com.blogspot.fravalle.lib.gui.mdi.AMDIFrame$2
+    com.blogspot.fravalle.lib.gui.mdi.MDIDesktop
+    com.blogspot.fravalle.lib.gui.mdi.MDIFrame
+
+Depends Upon:
+    com.blogspot.fravalle.lib.bl.beans
+    com.blogspot.fravalle.lib.bl.business.exceptions
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.monitor
+    com.blogspot.fravalle.util
+    com.blogspot.fravalle.util.gfx
+    com.blogspot.fravalle.util.text
+    java.awt
+    java.awt.event
+    java.beans
+    java.io
+    java.lang
+    java.net
+    java.util.logging
+    javax.imageio
+    javax.swing
+    javax.swing.border
+    javax.swing.event
+    javax.swing.text
+
+Used By:
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.gui.menu
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.gui.menu
+--------------------------------------------------
+
+Stats:
+    Total Classes: 18
+    Concrete Classes: 17
+    Abstract Classes: 1
+
+    Ca: 1
+    Ce: 15
+
+    A: 0,06
+    I: 0,94
+    D: 0,01
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$1
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$10
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$11
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$12
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$13
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$14
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$2
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$3
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$4
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$5
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$6
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$7
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$8
+    com.blogspot.fravalle.lib.gui.menu.AWindowMenu$9
+    com.blogspot.fravalle.lib.gui.menu.DefaultMenu
+    com.blogspot.fravalle.lib.gui.menu.DefaultMenu$1
+    com.blogspot.fravalle.lib.gui.menu.DefaultMenu$2
+
+Depends Upon:
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.gui.mdi
+    com.blogspot.fravalle.lib.monitor
+    com.blogspot.fravalle.util
+    com.blogspot.fravalle.util.filesystem
+    java.awt
+    java.awt.event
+    java.beans
+    java.io
+    java.lang
+    java.net
+    java.util
+    java.util.logging
+    javax.swing
+    javax.swing.event
+
+Used By:
+    com.blogspot.fravalle.lib.gui
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.gui.rendering
+--------------------------------------------------
+
+Stats:
+    Total Classes: 7
+    Concrete Classes: 5
+    Abstract Classes: 2
+
+    Ca: 1
+    Ce: 13
+
+    A: 0,29
+    I: 0,93
+    D: 0,21
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.gui.rendering.AXmlUi
+    com.blogspot.fravalle.lib.gui.rendering.IXmlUi
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.gui.rendering.JXmlUI
+    com.blogspot.fravalle.lib.gui.rendering.JXmlUI$1
+    com.blogspot.fravalle.lib.gui.rendering.JXmlUI$2
+    com.blogspot.fravalle.lib.gui.rendering.MyComboItemUI
+    com.blogspot.fravalle.lib.gui.rendering.XmlGroup
+
+Depends Upon:
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.monitor
+    java.awt
+    java.awt.event
+    java.beans
+    java.io
+    java.lang
+    java.util
+    java.util.logging
+    javax.swing
+    javax.swing.event
+    javax.swing.text
+    org.w3c.dom
+
+Used By:
+    com.blogspot.fravalle.lib.gui
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.lib.monitor
+--------------------------------------------------
+
+Stats:
+    Total Classes: 8
+    Concrete Classes: 3
+    Abstract Classes: 5
+
+    Ca: 12
+    Ce: 7
+
+    A: 0,62
+    I: 0,37
+    D: 0,01
+
+Abstract Classes:
+    com.blogspot.fravalle.lib.monitor.ErrorCodes
+    com.blogspot.fravalle.lib.monitor.IErrorCodes
+    com.blogspot.fravalle.lib.monitor.ILoggableObject
+    com.blogspot.fravalle.lib.monitor.IMonitor
+    com.blogspot.fravalle.lib.monitor.MainLogger
+
+Concrete Classes:
+    com.blogspot.fravalle.lib.monitor.ApplicationMonitor
+    com.blogspot.fravalle.lib.monitor.MainFormatter
+    com.blogspot.fravalle.lib.monitor.Monitor
+
+Depends Upon:
+    java.io
+    java.lang
+    java.security
+    java.text
+    java.util
+    java.util.logging
+    sun.security.action
+
+Used By:
+    com.blogspot.fravalle.lib.bl.beans
+    com.blogspot.fravalle.lib.bl.business
+    com.blogspot.fravalle.lib.data.csv
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.data.xml
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.gui.mdi
+    com.blogspot.fravalle.lib.gui.menu
+    com.blogspot.fravalle.lib.gui.rendering
+    com.blogspot.fravalle.util
+    com.blogspot.fravalle.util.filesystem
+    com.blogspot.fravalle.util.text
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.util
+--------------------------------------------------
+
+Stats:
+    Total Classes: 6
+    Concrete Classes: 1
+    Abstract Classes: 5
+
+    Ca: 6
+    Ce: 6
+
+    A: 0,83
+    I: 0,5
+    D: 0,33
+
+Abstract Classes:
+    com.blogspot.fravalle.util.APatcher
+    com.blogspot.fravalle.util.AResource
+    com.blogspot.fravalle.util.Constants
+    com.blogspot.fravalle.util.SettingRes
+    com.blogspot.fravalle.util.UIRes
+
+Concrete Classes:
+    com.blogspot.fravalle.util.FilteredProperties
+
+Depends Upon:
+    com.blogspot.fravalle.lib.monitor
+    java.io
+    java.lang
+    java.net
+    java.util
+    java.util.logging
+
+Used By:
+    com.blogspot.fravalle.lib.bl.beans
+    com.blogspot.fravalle.lib.data.sql
+    com.blogspot.fravalle.lib.data.xml
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.gui.mdi
+    com.blogspot.fravalle.lib.gui.menu
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.util.filesystem
+--------------------------------------------------
+
+Stats:
+    Total Classes: 5
+    Concrete Classes: 4
+    Abstract Classes: 1
+
+    Ca: 1
+    Ce: 8
+
+    A: 0,2
+    I: 0,89
+    D: 0,09
+
+Abstract Classes:
+    com.blogspot.fravalle.util.filesystem.FileSystemReader
+
+Concrete Classes:
+    com.blogspot.fravalle.util.filesystem.CachedFile
+    com.blogspot.fravalle.util.filesystem.DirectoryScanner
+    com.blogspot.fravalle.util.filesystem.JarManager
+    com.blogspot.fravalle.util.filesystem.JarReader
+
+Depends Upon:
+    com.blogspot.fravalle.lib.monitor
+    java.io
+    java.lang
+    java.net
+    java.util
+    java.util.jar
+    java.util.logging
+    javax.swing
+
+Used By:
+    com.blogspot.fravalle.lib.gui.menu
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.util.gfx
+--------------------------------------------------
+
+Stats:
+    Total Classes: 1
+    Concrete Classes: 0
+    Abstract Classes: 1
+
+    Ca: 1
+    Ce: 4
+
+    A: 1
+    I: 0,8
+    D: 0,8
+
+Abstract Classes:
+    com.blogspot.fravalle.util.gfx.Drawer
+
+Concrete Classes:
+
+Depends Upon:
+    java.awt
+    java.awt.geom
+    java.lang
+    javax.swing
+
+Used By:
+    com.blogspot.fravalle.lib.gui.mdi
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.util.text
+--------------------------------------------------
+
+Stats:
+    Total Classes: 3
+    Concrete Classes: 3
+    Abstract Classes: 0
+
+    Ca: 2
+    Ce: 6
+
+    A: 0
+    I: 0,75
+    D: 0,25
+
+Abstract Classes:
+
+Concrete Classes:
+    com.blogspot.fravalle.util.text.Configuration
+    com.blogspot.fravalle.util.text.Text
+    com.blogspot.fravalle.util.text.TextTest
+
+Depends Upon:
+    com.blogspot.fravalle.lib.monitor
+    java.io
+    java.lang
+    java.util
+    junit.framework
+    junit.textui
+
+Used By:
+    com.blogspot.fravalle.lib.gui
+    com.blogspot.fravalle.lib.gui.mdi
+
+--------------------------------------------------
+- Package: com.blogspot.fravalle.util.web.html
+--------------------------------------------------
+
+Stats:
+    Total Classes: 1
+    Concrete Classes: 1
+    Abstract Classes: 0
+
+    Ca: 0
+    Ce: 6
+
+    A: 0
+    I: 1
+    D: 0
+
+Abstract Classes:
+
+Concrete Classes:
+    com.blogspot.fravalle.util.web.html.Hyperactive
+
+Depends Upon:
+    java.io
+    java.lang
+    java.net
+    javax.swing
+    javax.swing.event
+    javax.swing.text.html
+
+Used By:
+    Not used by any packages.
+
+--------------------------------------------------
+- Package: java.awt
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.awt.event
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.awt.geom
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.beans
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.io
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.lang
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.lang.reflect
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.net
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.security
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.sql
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.text
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.util
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.util.jar
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: java.util.logging
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.imageio
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.swing
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.swing.border
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.swing.event
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.swing.plaf.basic
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.swing.text
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.swing.text.html
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.swing.tree
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.xml.parsers
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.xml.transform
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: javax.xml.transform.stream
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: junit.framework
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: junit.textui
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: org.w3c.dom
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: org.xml.sax
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+--------------------------------------------------
+- Package: sun.security.action
+--------------------------------------------------
+No stats available: package referenced, but not analyzed.
+
+
+--------------------------------------------------
+- Package Dependency Cycles:
+--------------------------------------------------
+
+com.blogspot.fravalle.lib.bl.business
+    |
+    |   com.blogspot.fravalle.lib.data.sql
+    |-> com.blogspot.fravalle.lib.gui
+    |   com.blogspot.fravalle.lib.gui.rendering
+    |-> com.blogspot.fravalle.lib.gui
+
+com.blogspot.fravalle.lib.data.sql
+    |
+    |-> com.blogspot.fravalle.lib.gui
+    |   com.blogspot.fravalle.lib.gui.rendering
+    |-> com.blogspot.fravalle.lib.gui
+
+com.blogspot.fravalle.lib.gui
+    |
+    |   com.blogspot.fravalle.lib.gui.rendering
+    |-> com.blogspot.fravalle.lib.gui
+
+com.blogspot.fravalle.lib.gui.mdi
+    |
+    |-> com.blogspot.fravalle.lib.gui
+    |   com.blogspot.fravalle.lib.gui.rendering
+    |-> com.blogspot.fravalle.lib.gui
+
+com.blogspot.fravalle.lib.gui.menu
+    |
+    |-> com.blogspot.fravalle.lib.gui
+    |   com.blogspot.fravalle.lib.gui.rendering
+    |-> com.blogspot.fravalle.lib.gui
+
+com.blogspot.fravalle.lib.gui.rendering
+    |
+    |   com.blogspot.fravalle.lib.gui
+    |-> com.blogspot.fravalle.lib.gui.rendering
+
+
+--------------------------------------------------
+- Summary:
+--------------------------------------------------
+
+Name, Class Count, Abstract Class Count, Ca, Ce, A, I, D, V:
+
+com.l2fprod.gui.plaf.skin,0,0,1,0,0,0,1,1
+com.blogspot.fravalle.lib.bl,1,0,1,2,0,0,67,0,33,1
+com.blogspot.fravalle.lib.bl.beans,21,13,4,12,0,62,0,75,0,37,1
+com.blogspot.fravalle.lib.bl.business,2,1,1,9,0,5,0,9,0,4,1
+com.blogspot.fravalle.lib.bl.business.exceptions,2,0,4,1,0,0,2,0,8,1
+com.blogspot.fravalle.lib.data.csv,5,1,0,6,0,2,1,0,2,1
+com.blogspot.fravalle.lib.data.db.pooling,3,0,1,4,0,0,8,0,2,1
+com.blogspot.fravalle.lib.data.sql,9,3,3,16,0,33,0,84,0,18,1
+com.blogspot.fravalle.lib.data.xml,8,2,2,12,0,25,0,86,0,11,1
+com.blogspot.fravalle.lib.gui,113,8,5,30,0,07,0,86,0,07,1
+com.blogspot.fravalle.lib.gui.mdi,14,4,3,20,0,29,0,87,0,16,1
+com.blogspot.fravalle.lib.gui.menu,18,1,1,15,0,06,0,94,0,01,1
+com.blogspot.fravalle.lib.gui.rendering,7,2,1,13,0,29,0,93,0,21,1
+com.blogspot.fravalle.lib.monitor,8,5,12,7,0,62,0,37,0,01,1
+com.blogspot.fravalle.util,6,5,6,6,0,83,0,5,0,33,1
+com.blogspot.fravalle.util.filesystem,5,1,1,8,0,2,0,89,0,09,1
+com.blogspot.fravalle.util.gfx,1,1,1,4,1,0,8,0,8,1
+com.blogspot.fravalle.util.text,3,0,2,6,0,0,75,0,25,1
+com.blogspot.fravalle.util.web.html,1,0,0,6,0,1,0,1
+java.awt,0,0,5,0,0,0,1,1
+java.awt.event,0,0,4,0,0,0,1,1
+java.awt.geom,0,0,1,0,0,0,1,1
+java.beans,0,0,6,0,0,0,1,1
+java.io,0,0,15,0,0,0,1,1
+java.lang,0,0,18,0,0,0,1,1
+java.lang.reflect,0,0,2,0,0,0,1,1
+java.net,0,0,7,0,0,0,1,1
+java.security,0,0,1,0,0,0,1,1
+java.sql,0,0,6,0,0,0,1,1
+java.text,0,0,4,0,0,0,1,1
+java.util,0,0,14,0,0,0,1,1
+java.util.jar,0,0,1,0,0,0,1,1
+java.util.logging,0,0,11,0,0,0,1,1
+javax.imageio,0,0,1,0,0,0,1,1
+javax.swing,0,0,8,0,0,0,1,1
+javax.swing.border,0,0,2,0,0,0,1,1
+javax.swing.event,0,0,5,0,0,0,1,1
+javax.swing.plaf.basic,0,0,1,0,0,0,1,1
+javax.swing.text,0,0,3,0,0,0,1,1
+javax.swing.text.html,0,0,1,0,0,0,1,1
+javax.swing.tree,0,0,2,0,0,0,1,1
+javax.xml.parsers,0,0,1,0,0,0,1,1
+javax.xml.transform,0,0,1,0,0,0,1,1
+javax.xml.transform.stream,0,0,1,0,0,0,1,1
+junit.framework,0,0,1,0,0,0,1,1
+junit.textui,0,0,1,0,0,0,1,1
+org.w3c.dom,0,0,3,0,0,0,1,1
+org.xml.sax,0,0,1,0,0,0,1,1
+sun.security.action,0,0,1,0,0,0,1,1

@@ -1,0 +1,1 @@
+#elenco query di selezione o eliminazione impiegate in applicazione

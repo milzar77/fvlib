@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<!-- web.xml used for local development -->
+<web-app>
+  <display-name>Star Map 3D</display-name>
+  <description>WEB APPLICATION: Star Map 3D context</description>
+  
+  <!-- Servlet Configuration -->
+  <servlet>
+    <servlet-name>
+        config
+    </servlet-name>
+    <servlet-class>
+        com.blogspot.fravalle.j2ee.web.WebConfig
+    </servlet-class>
+        <init-param>
+            <param-name>config_flow</param-name>
+            <param-value>config</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xml_archive_path</param-name>
+            <param-value>/home/antares/public_html/docs/xml/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xsl_base_path</param-name>
+            <param-value>res/</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>
+        read
+    </servlet-name>
+    <servlet-class>
+        com.blogspot.fravalle.j2ee.web.PageReader
+    </servlet-class>
+        <init-param>
+            <param-name>content_flow</param-name>
+            <param-value>content</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xml_archive_path</param-name>
+            <param-value>/home/antares/public_html/docs/xml/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xsl_base_path</param-name>
+            <param-value>res/</param-value>
+        </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>
+        node
+    </servlet-name>
+    <servlet-class>
+        com.blogspot.fravalle.j2ee.web.PageNode
+    </servlet-class>
+  </servlet>
+  
+	<!-- load hsqldb with db schema -->
+    <servlet>
+        <servlet-name>HSqlDb</servlet-name>
+        <servlet-class>com.blogspot.fravalle.util.db.DbLoader</servlet-class>
+        <init-param>
+            <param-name>log_flow</param-name>
+            <param-value>stats</param-value>
+        </init-param>
+        <init-param>
+            <param-name>schema</param-name>
+            <param-value>/schema.sql</param-value>
+        </init-param>
+        <init-param>
+            <param-name>population</param-name>
+            <param-value>/population.sql</param-value>
+        </init-param>
+        <init-param>
+            <param-name>max_statements</param-name>
+            <param-value>20</param-value>
+        </init-param>
+        <init-param>
+            <param-name>statement_delimiter</param-name>
+            <param-value>
+            <!-- Per identificare il parametro utilizzare doppia linea seguita da doppio due punti -->
+            -- ::</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>xml_archive_path</param-name>
+            <param-value>/usr/local/orion/webapps/j2ee/archart-app/artsrc/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xsl_base_path</param-name>
+            <param-value>res/</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+  <!-- Servlet Mapping -->
+  <servlet-mapping>
+    <servlet-name>
+        read
+    </servlet-name>
+    <url-pattern>
+        *.leggi
+    </url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>
+        read
+    </servlet-name>
+    <url-pattern>
+        /doc/*
+    </url-pattern>
+  </servlet-mapping>
+    
+    <!-- special action availaible on port 8080 -->
+    <servlet-mapping>
+        <servlet-name>HSqlDb</servlet-name>
+        <url-pattern>/hyperdb</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HSqlDb</servlet-name>
+        <url-pattern>/hyperdb/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HSqlDb</servlet-name>
+        <url-pattern>*.db</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>config</servlet-name>
+        <url-pattern>*.config</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>node</servlet-name>
+        <url-pattern>*.node</url-pattern>
+    </servlet-mapping>
+
+  <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
+
+  <!-- Application Tag Library Descriptor -->
+
+  <!-- The Welcome File List -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- Application error pages -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/web/errors/404.jsp</location>
+	</error-page>
+
+    <!-- using http error codes above 505 to simulate application errors, codeError inesistente utile per simulare 404 -->
+	<error-page>
+		<error-code>506</error-code>
+		<location>/web/errors/codeError.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>507</error-code>
+		<location>/web/errors/appError.jsp</location>
+	</error-page>
+
+  <taglib>
+        <taglib-uri>GridObjects</taglib-uri>
+        <taglib-location>/WEB-INF/GridLayer.tld</taglib-location>
+  </taglib>  
+
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/stinger</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+
+</web-app>

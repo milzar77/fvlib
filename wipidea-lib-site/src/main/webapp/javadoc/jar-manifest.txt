@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: ./other-libs.jar
+Main-Class: MainClassHere
