@@ -28,12 +28,12 @@
   </dependencies>
 
 	<modules>
-	  <module>wipidea-lib-res</module>
-	  <module>wipidea-lib-util</module>
-	  <module>wipidea-lib-common</module>
-	  <module>wipidea-lib-bl</module>
-	  <module>wipidea-lib-web</module>
-	  <module>wipidea-lib-site</module>
+	  <module>fvlib-res</module>
+	  <module>fvlib-util</module>
+	  <module>fvlib-common</module>
+	  <module>fvlib-bl</module>
+	  <module>fvlib-web</module>
+	  <module>fvlib-site</module>
 	</modules>
   
   <build>
