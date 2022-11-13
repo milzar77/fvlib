@@ -1,0 +1,47 @@
+22	421	159	539
+2	147	399	983
+
+Stats:
+200_000_000 ogni 100 pari a intervalli di 2_000_000
+botta unica in 3min 56sec
+
+
+200_000_000 ogni 3
+botta parallelizzata in 2min 10sec
+
+200_000_000 ogni 5
+botta parallelizzata in 1min 52sec
+
+200_000_000 ogni 10 con boh
+botta parallelizzata in 1min 48sec
+
+200_000_000 ogni 10 SENZA flush every end caching CON Scan Progress Analyzer Window
+botta parallelizzata in 1min 48sec
+
+200_000_000 ogni 10 SENZA flush every end caching CON Console DOT
+botta parallelizzata in 5min 2sec
+
+200_000_000 ogni 10 SENZA flush every end caching
+botta parallelizzata in 1min 47sec
+
+200_000_000 ogni 10 CON flush every end caching
+botta parallelizzata in 1min 53sec
+
+
+200_000_000 ogni 50
+botta parallelizzata in 1min 56sec
+
+200_000_000 ogni 100
+botta parallelizzata in 1min 56sec
+
+200_000_000 ogni 200
+botta parallelizzata in 1min 56sec
+
+200_000_000 ogni 500
+botta parallelizzata in 2min 10sec
+
+200_000_000 ogni 1000
+botta parallelizzata in 2min 10sec
+
+
+
