@@ -54,9 +54,9 @@ final public class LogFormatter extends SimpleFormatter {
 	private final static String format = "{0,date} {0,time}";
 	private MessageFormat formatter;
 	private Object args[] = new Object[1];
-	private String lineSeparator = (String) java.security.AccessController
-			.doPrivileged(new sun.security.action.GetPropertyAction(
-					"line.separator"));
+	private String				lineSeparator	= System.getProperty("line.separator"); //FIX:(String)java.security.AccessController
+	//.doPrivileged(new sun.security.action.GetPropertyAction(
+	//		"line.separator"));
 
 	/**
 	 * Format the given LogRecord disposing message text in a plain format with
