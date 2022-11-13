@@ -1,0 +1,134 @@
+22	421	159	539
+2	147	399	983
+
+Aggiungere notifica raggiungimento ogni tot number reached con formattazione gruppi 
+
+Rappresentazione gruppi cifre multicolonna
+Filtrare per soli dispari e poi per indivisibili by 3, 5, 7, 9 (magari fino ai dispari di 100 o mille)
+Implementare procedura di stop e salvataggio
+Salvare su /tmp
+
+Parallelizzare
+
+
+[Performance Test Stats]:
+
+200_000_000 ogni 100 pari a intervalli di 2_000_000
+botta unica in 3min 56sec
+
+
+200_000_000 ogni 3
+botta parallelizzata in 2min 10sec
+
+200_000_000 ogni 5
+botta parallelizzata in 1min 52sec
+
+200_000_000 ogni 10 con boh
+botta parallelizzata in 1min 48sec
+
+200_000_000 ogni 10 SENZA flush every end caching CON Scan Progress Analyzer Window
+botta parallelizzata in 1min 48sec
+
+200_000_000 ogni 10 SENZA flush every end caching CON Console DOT
+botta parallelizzata in 5min 2sec
+
+200_000_000 ogni 10 SENZA flush every end caching
+botta parallelizzata in 1min 47sec
+
+200_000_000 ogni 10 CON flush every end caching
+botta parallelizzata in 1min 53sec
+
+==>
+
+200_000_000 ogni 10 SENZA flush every end caching CON Scan Progress Analyzer Window + check base prime requirement with decimal
+Ended time @ 2022-11-13T14:01:02.860159 for caching terminated on 200.000.001 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 165720
+Total time for #_From-177777777_To-199999998 in seconds: 165
+Total time for #_From-177777777_To-199999998 in minutes: 2
+
+200_000_000 ogni 10 CON flush every end caching CON Scan Progress Analyzer Window + check base prime requirement with decimal
+Test inutile
+
+200_000_000 ogni 10 SENZA flush every end caching SENZA Scan Progress Analyzer Window + check base prime requirement with decimal
+Ended time @ 2022-11-13T14:13:33.949047 for caching terminated on 200.000.001 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 156010
+Total time for #_From-177777777_To-199999998 in seconds: 156
+Total time for #_From-177777777_To-199999998 in minutes: 2
+
+200_000_000 ogni 10 CON flush every end caching SENZA Scan Progress Analyzer Window + check base prime requirement with decimal
+Ended time @ 2022-11-13T14:33:23.031645 for caching terminated on 200.000.001 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 156219
+Total time for #_From-177777777_To-199999998 in seconds: 156
+Total time for #_From-177777777_To-199999998 in minutes: 2
+
+
+
+200_000_000 ogni 10 SENZA flush every end caching CON Scan Progress Analyzer Window + check base prime requirement with DIRECT BIGINTEGER
+WIP
+
+200_000_000 ogni 10 SENZA flush caching CON Scan Progress Analyzer Window + with check for base prime requirement with BIGINTEGER
+Ended time @ 2022-11-13T15:19:02.926730 for caching terminated on 200.000.001 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 141498
+Total time for #_From-177777777_To-199999998 in seconds: 141
+Total time for #_From-177777777_To-199999998 in minutes: 2
+
+200_000_000 ogni 10 SENZA flush caching CON Scan Progress Analyzer Window + with even skipper algo
+Ended time @ 2022-11-13T15:12:38.673322 for caching terminated on 200.000.003 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 118475
+Total time for #_From-177777777_To-199999998 in seconds: 118
+Total time for #_From-177777777_To-199999998 in minutes: 1
+
+200_000_000 ogni 10 SENZA flush caching CON Scan Progress Analyzer Window + check for base prime requirement until 10 ODD DIVISORS + even skipper algo
+Ended time @ 2022-11-13T16:29:27.026275 for caching terminated on 200.000.003 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 71645
+Total time for #_From-177777777_To-199999998 in seconds: 71
+Total time for #_From-177777777_To-199999998 in minutes: 1
+
+200_000_000 ogni 10 SENZA flush caching CON Scan Progress Analyzer Window + check for base prime requirement until 20 ODD DIVISORS + even skipper algo
+Ended time @ 2022-11-13T17:06:35.379777 for caching terminated on 200.000.003 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 70425
+Total time for #_From-177777777_To-199999998 in seconds: 70
+Total time for #_From-177777777_To-199999998 in minutes: 1
+
+200_000_000 ogni 10 SENZA flush caching CON Scan Progress Analyzer Window + check for base prime requirement until 100 ODD DIVISORS + even skipper algo
+Ended time @ 2022-11-13T17:04:31.133865 for caching terminated on 200.000.003 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 94117
+Total time for #_From-177777777_To-199999998 in seconds: 94
+Total time for #_From-177777777_To-199999998 in minutes: 1
+
+
+200_000_000 ogni 10 SENZA flush caching CON Scan Progress Analyzer Window + without ANY check for base prime requirement and even skipper algo
+Ended time @ 2022-11-13T14:45:42.739774 for caching terminated on 200.000.003 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 109371
+Total time for #_From-177777777_To-199999998 in seconds: 109
+Total time for #_From-177777777_To-199999998 in minutes: 1
+
+200_000_000 ogni 10 SENZA flush caching CON Scan Progress Analyzer Window + with check for base prime requirement with BIGINTEGER and even skipper algo
+Ended time @ 2022-11-13T14:53:01.553759 for caching terminated on 200.000.003 MILIONI DI CUCUZZE!
+Total time for #_From-177777777_To-199999998 in milliseconds: 111631
+Total time for #_From-177777777_To-199999998 in seconds: 111
+Total time for #_From-177777777_To-199999998 in minutes: 1
+
+
+200_000_000 ogni 10 SENZA flush caching CON Scan Progress Analyzer Window + without ANY check for base prime requirement and without even skipper algo
+200_000_000 ogni 10 SENZA flush caching CON Scan Progress Analyzer Window + with check for base prime requirement with BIGINTEGER and NOT even skipper algo
+
+
+
+200_000_000 ogni 50
+botta parallelizzata in 1min 56sec
+
+200_000_000 ogni 100
+botta parallelizzata in 1min 56sec
+
+200_000_000 ogni 200
+botta parallelizzata in 1min 56sec
+
+200_000_000 ogni 500
+botta parallelizzata in 2min 10sec
+
+200_000_000 ogni 1000
+botta parallelizzata in 2min 10sec
+
+
+
