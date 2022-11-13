@@ -45,6 +45,8 @@ public class PrimeListGenerator {
 
     private static final int PARALLEL_COMPUTATIONAL_UNIT = 1_000_000;
 
+    private static final long CACHE_PRIMES_SPOOLER = 1000L;
+
     protected static DecimalFormat NUMBER_GROUP_FORMATTER = new DecimalFormat("#,###");
     private static Integer processIndex = 0;
 
@@ -163,7 +165,10 @@ public class PrimeListGenerator {
             } else {
                     /*System.out.printf("CACHE CONTENT %s\n", this.primeSpoolCache);
                     System.out.printf("Current number reached: %s\n", currentEvaluatedNumber);*/
-                    for (BigInteger bi : this.primeSpoolCache) {
+                    //for (BigInteger bi : this.primeSpoolCache) {
+                    for (int reverseIdx = this.primeSpoolCache.size()-1; reverseIdx>0; reverseIdx--) {
+                        BigInteger bi = this.primeSpoolCache.get(reverseIdx);
+                        System.out.printf("Number spooler size: %s\n", this.primeSpoolCache.size());
                         if (bi.isProbablePrime(1)) {
                             fos.write((bi.toString() + "\n").getBytes());
                             //System.out.printf("Estimated prime number [%s] found!\n", NUMBER_GROUP_FORMATTER.format(bi));
@@ -188,13 +193,17 @@ public class PrimeListGenerator {
                                 this.updateTaskPrimeProgress(key, bi, from, upTo, intervalPar);//only detected primes
                             }
                         }
+                        this.primeSpoolCache.removeElementAt(reverseIdx);
                         //this.updateTaskPrimeProgress();//all numbers
                     }
                     //fos.write(this.primeSpoolCache.toString().getBytes());
-                    if (ConsoleOptions.FLUSH_AT_EVERY_CACHING)
+                    if (ConsoleOptions.FLUSH_AT_EVERY_CACHING) {
                         fos.flush();
-                    //System.out.printf("Caching terminated on %s!\n", NUMBER_GROUP_FORMATTER.format(currentEvaluatedNumber));
-                    this.primeSpoolCache.clear();
+                        //System.out.printf("Caching terminated on %s!\n", NUMBER_GROUP_FORMATTER.format(currentEvaluatedNumber));
+                    }
+
+                    if (this.primeSpoolCache.size()>CACHE_PRIMES_SPOOLER)
+                        this.primeSpoolCache.clear();
 
                     this.primeSpoolCache.add(currentEvaluatedNumber);
             }
@@ -461,8 +470,8 @@ public class PrimeListGenerator {
             */
 
             //BigInteger upTo = BigInteger.valueOf(Integer.MAX_VALUE);//circa 30min
-            BigInteger upTo = BigInteger.valueOf(200_000_000);
-            //BigInteger upTo = BigInteger.valueOf(2_000_000);
+            //BigInteger upTo = BigInteger.valueOf(200_000_000);
+            BigInteger upTo = BigInteger.valueOf(2_000_000);
             PrimeListGenerator.parallelPrimeComputation(BigInteger.ONE, upTo, 10);
 
 
