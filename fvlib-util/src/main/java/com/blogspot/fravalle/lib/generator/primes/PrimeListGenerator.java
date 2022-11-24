@@ -389,14 +389,18 @@ public class PrimeListGenerator {
             Runnable runner = new Runnable() {
                 @Override
                 public void run() {
+                    Integer procIndex = finalIndex;
+                    procIndex += 1;
+                    PrimeListGenerator primeListGenerator1 = null;
                     try {
-                        Integer procIndex = finalIndex;
-                        procIndex += 1;
-                        PrimeListGenerator primeListGenerator1 = new PrimeListGenerator(totalProcesses.toString(), "_From-" + bigRange[0] + "_To-" + bigRange[1]);
+                        primeListGenerator1 = new PrimeListGenerator(totalProcesses.toString(), "_From-" + bigRange[0] + "_To-" + bigRange[1]);
                         primeListGenerator1.scanRealNumbersWithoutCache(procIndex, bigRange[0], bigRange[1], bigRange[2]);
                     } catch (FileNotFoundException e) {
                         throw new RuntimeException(e);
                     } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    } catch (Exception e) {
+                        reportError(e, primeListGenerator1);
                         throw new RuntimeException(e);
                     }
                 }
@@ -407,6 +411,21 @@ public class PrimeListGenerator {
             threads[index].start();
             index++;
         }
+
+    }
+
+    private static void reportError(Exception ex, PrimeListGenerator instance) {
+
+        System.err.printf("Messaggio di errore: %s\n", ex.getMessage());
+        System.err.printf("Ultimo stack dell'errore --> %s : %s\n", ex.getStackTrace()[0].getClassName(), ex.getStackTrace()[0].getLineNumber());
+        System.err.printf("Messaggio di errore: %s\n", ex.getMessage());
+
+        if (instance!=null) {
+            System.err.printf("Instance ID: %s\n", instance.scanId);
+            System.err.printf("Instance file output name: %s\n", instance.fileOutputName);
+            System.err.printf("Instance limit to reach: %s\n", instance.limitedTo.toString());
+        }
+
 
     }
 
@@ -538,7 +557,7 @@ public class PrimeListGenerator {
             ConsoleOptions.DIVIDER_BY_ODD = ConsoleOptions.DIVIDE_BY_ODD_METH;
             //ConsoleOptions.DIVIDER_BY_ODD = ConsoleOptions.DIVIDE_BY_ODD_ALGO;
 
-            ConsoleOptions.UP_TO_DIVISOR = 20;
+            ConsoleOptions.UP_TO_DIVISOR = 10;
 
             ConsoleOptions.updateDefaultOptions();
 
