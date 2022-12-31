@@ -1,7 +1,14 @@
 package com.blogspot.fravalle.lib.data.xml;
 
+import javax.swing.*;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.LinkedHashMap;
+import java.util.Scanner;
 import java.util.Vector;
 
 public class BookmarkReference {
@@ -21,7 +28,9 @@ public class BookmarkReference {
     public Integer totalDuplicatesInSameBranch;
     public Vector<String> categoryPath;
 
-    public BookmarkReference(File sourceBookmarkFile, String s, Boolean hasPrimaryReference, Vector<String> currentCategoryPath) {
+    public EBookmarkStatus ebs;
+
+    public BookmarkReference(File sourceBookmarkFile, String s, Boolean hasPrimaryReference, Vector<String> currentCategoryPath, Boolean checkSanity) {
         this.sourceBookmarkFilePath = sourceBookmarkFile.getPath();
         this.sourceBookmarkFileName = sourceBookmarkFile.getName();
         this.hasPrimaryReference = hasPrimaryReference;
@@ -29,8 +38,71 @@ public class BookmarkReference {
         this.categoryPath = currentCategoryPath;
         this.totalDuplicatesInTree = 0;
         this.totalDuplicatesInSameBranch = 0;
+        this.ebs = EBookmarkStatus.ONLINE;
         this.readKey();
         this.readValues();
+
+        if (checkSanity)
+            this.checkSanity();
+    }
+
+    private void checkSanity() {
+        if (this.totalDuplicatesInTree>0)
+            return;
+        URL url = null;
+        try {
+            url = new URL(this.key);
+
+            HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
+            httpConn.setConnectTimeout(5000);
+            httpConn.setReadTimeout(2000);
+
+            System.out.println("HTTP CONN URL: [" + url.toString() + "]");
+            System.out.println("HTTP CONN STATUS: " + httpConn.getResponseCode());
+            System.out.println("HTTP CONN MESSAGE: " + httpConn.getResponseMessage());
+            //StringReader isr = new StringReader();
+            InputStream is = (InputStream) httpConn.getContent();
+            Scanner s = new Scanner(is).useDelimiter("\\A");
+            String result = s.hasNext() ? s.next() : "";
+
+            Boolean potential404 = (result.indexOf("\"404\"") != -1
+                    || result.indexOf("'404'") != -1
+                    || result.indexOf(">404<") != -1
+                    || result.matches(".*\\b404\\b.*"));
+            //System.out.println("HTTP CONN CONTENT: [" + result + "]");
+            System.out.println("HTTP CONN POTENTIAL 404: [" + potential404
+                    + "]");
+            httpConn.disconnect();
+            if (httpConn.getResponseCode() >= 200 && httpConn.getResponseCode() < 300) {
+                this.ebs = EBookmarkStatus.ONLINE;
+            } else {
+                if (httpConn.getResponseCode() == 404) {
+                    this.ebs = EBookmarkStatus.NOT_FOUND;
+                } else {
+                    if (potential404)
+                        this.ebs = EBookmarkStatus.POTENTIAL_NOT_FOUND;
+                    else
+                        this.ebs = EBookmarkStatus.CONN_EXCEPTION;
+                }
+            }
+        } catch (java.lang.ClassCastException e) {
+            this.ebs = EBookmarkStatus.CONN_CLASSCASTEXCEPTION;
+        } catch (java.io.FileNotFoundException e) {
+            this.ebs = EBookmarkStatus.STRANGE_FILENOTFOUND_CONN_EXCEPTION;
+        } catch (javax.net.ssl.SSLHandshakeException e) {
+            this.ebs = EBookmarkStatus.SSLHANDSHAKEEXCEPTION;
+        } catch (java.net.ConnectException e) {
+            this.ebs = EBookmarkStatus.CONN_EXCEPTION;
+        } catch (java.net.UnknownServiceException e) {
+            this.ebs = EBookmarkStatus.UNKNOWNSERVICEEXCEPTION;
+        } catch (java.net.UnknownHostException e) {
+            this.ebs = EBookmarkStatus.NOT_MORE_REACHABLE;
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            this.ebs = EBookmarkStatus.IOEXCEPTION;
+            //throw new RuntimeException(e);
+        }
     }
 
     public void readKey() {

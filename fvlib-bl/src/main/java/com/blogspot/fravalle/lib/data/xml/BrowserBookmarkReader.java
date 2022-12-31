@@ -1,8 +1,11 @@
 package com.blogspot.fravalle.lib.data.xml;
 
 import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
+import java.util.Scanner;
 import java.util.Vector;
 import java.util.logging.Logger;
 
@@ -13,6 +16,8 @@ public class BrowserBookmarkReader {
     static private LinkedHashMap<String, BookmarkReference> BOOKMARKS_CACHE = new LinkedHashMap<String, BookmarkReference>();
 
     static private EBookmarkOutputFormat ebof;
+
+    static private Boolean checkSanity;
 
     private LinkedHashMap<String, BookmarkReference> BOOKMARKS_SESSION = new LinkedHashMap<String, BookmarkReference>();
 
@@ -66,7 +71,7 @@ public class BrowserBookmarkReader {
                 //eseguo il parsing della linea creando il bookmark reference
                 Vector<String> myCategoryPath = new Vector<String>();
                 myCategoryPath.addAll(currentCategoryPath);
-                BookmarkReference bk = new BookmarkReference(fileChannel, line, this.useAsPrimaryReference, myCategoryPath);
+                BookmarkReference bk = new BookmarkReference(fileChannel, line, this.useAsPrimaryReference, myCategoryPath, checkSanity);
                 //aggiungo il bookmark reference all'elenco univoco di bookmark reference
                 if (!BOOKMARKS_CACHE.containsKey(bk.key))
                     if (this.useAsPrimaryReference) {
@@ -110,6 +115,32 @@ public class BrowserBookmarkReader {
 
         }
 
+
+
+        for (String k : BOOKMARKS_CACHE.keySet()) {
+            URL url = new URL("http://www.google.com");
+            HttpURLConnection httpConn = (HttpURLConnection)url.openConnection();
+            logger.info("HTTP CONN STATUS: " + httpConn.getResponseCode());
+            logger.info("HTTP CONN MESSAGE: " + httpConn.getResponseMessage());
+            //StringReader isr = new StringReader();
+            InputStream is = (InputStream) httpConn.getContent();
+            Scanner s = new Scanner(is).useDelimiter("\\A");
+            String result = s.hasNext() ? s.next() : "";
+
+            logger.finest("HTTP CONN CONTENT: [" + result + "]");
+            logger.info("HTTP CONN POTENTIAL SUBMIT: [" + (result.indexOf("\"404\"")!=-1
+                    || result.indexOf("'404'")!=-1
+                    || result.indexOf(">404<")!=-1
+                    || result.matches(".*\\b404\\b.*"))
+                    + "]");
+            httpConn.disconnect();
+            break;
+        }
+
+
+
+
+
         File fOut = new File("./bookmarks-fv.html");
         FileOutputStream fos = new FileOutputStream(fOut, false);
 
@@ -141,8 +172,10 @@ public class BrowserBookmarkReader {
 
             String catId = BOOKMARKS_CACHE.get(k).categoryPath.hashCode()+"";
             String catName = BOOKMARKS_CACHE.get(k).categoryPath.toString();
-            String bookmarkSkeleton = "<DIV class=\"hiddenCat p_id%s\" alt=\"%s\"><A HREF=\"%s\" TARGET=\"_new\">%s</A></DIV>\n";
-            String bookmarkOutput = String.format(bookmarkSkeleton, catId, catName, BOOKMARKS_CACHE.get(k).key, BOOKMARKS_CACHE.get(k).values.get("LABEL"));
+            String bkStatus = BOOKMARKS_CACHE.get(k).ebs.toString();
+
+            String bookmarkSkeleton = "<DIV class=\"hiddenCat p_id%s\" alt=\"%s\"><A HREF=\"%s\" TARGET=\"_new\">%s (%s)</A></DIV>\n";
+            String bookmarkOutput = String.format(bookmarkSkeleton, catId, catName, BOOKMARKS_CACHE.get(k).key, BOOKMARKS_CACHE.get(k).values.get("LABEL"), bkStatus);
 
             String catOutputSkeleton = "<DIV><SPAN id=\"id%s\" onclick=\"showBookmarksByClassName(this.id)\">[+]</SPAN> <SPAN onclick=\"showBookmarksByClassName('id%s')\">%s</SPAN></DIV>";
             String catOutput = String.format(catOutputSkeleton, catId, catId, catName);
@@ -171,7 +204,14 @@ public class BrowserBookmarkReader {
     public static void main(String[] args) throws IOException {
 
         //"/home/goldenplume/Documenti/BookmarksBackup/FV-FREE"
-        if (args.length==2) {
+        if (args.length==3) {
+
+            checkSanity = Boolean.parseBoolean(args[2]);
+
+            /*System.out.println("STATUS: " + checkSanity);
+            if (true)
+                System.exit(0);*/
+
             if ( args[1].equals("web-page") ) {
                 ebof = EBookmarkOutputFormat.WEBPAGE;
             } else if (args[1].equals("web-fragment")) {
