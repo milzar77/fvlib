@@ -1,3 +1,4 @@
+<DIV id="bkContainer">
 <DIV><SPAN id="id-194773701" onclick="showBookmarksByClassName(this.id)">[+]</SPAN> <SPAN onclick="showBookmarksByClassName('id-194773701')">[ALL J3D]</SPAN></DIV><DIV class="hiddenCat p_id-194773701" alt="[ALL J3D]"><A HREF="http://betaville.bxmc.poly.edu/jme/forum/index.php" TARGET="_new">jMonkey Engine - Index (NOT_MORE_REACHABLE)</A></DIV>
 <DIV class="hiddenCat p_id-194773701" alt="[ALL J3D]"><A HREF="http://209.85.129.132/search?q=cache:p3juYnJIrM0J:betaville.bxmc.poly.edu/jme/forum/index.php%3Faction%3Dprintpage%3Btopic%3D10991.0+GRAVE:+Native+code+library+(32+and+64+bit+library)+failed+to+load:+java.lang.UnsatisfiedLinkError:+no+odejava+in+java.library.path&amp;cd=1&amp;hl=en&amp;ct=clnk" TARGET="_new">Print Page - jme physics for JME 2.0 -&gt; No physics implementation was registered nor found (IOEXCEPTION)</A></DIV>
 <DIV class="hiddenCat p_id-194773701" alt="[ALL J3D]"><A HREF="http://betaville.bxmc.poly.edu/jme/forum/index.php?action=printpage%3Btopic=10991.0" TARGET="_new">Print Page - jme physics for JME 2.0 -&gt; No physics implementation was registered nor found (NOT_MORE_REACHABLE)</A></DIV>
@@ -3968,3 +3969,35 @@
 <DIV><SPAN id="id1306902935" onclick="showBookmarksByClassName(this.id)">[+]</SPAN> <SPAN onclick="showBookmarksByClassName('id1306902935')">[MY CAT&DOG]</SPAN></DIV><DIV class="hiddenCat p_id1306902935" alt="[MY CAT&DOG]"><A HREF="place:folder=BOOKMARKS_MENU&folder=UNFILED_BOOKMARKS&folder=TOOLBAR&queryType=1&sort=12&maxResults=10&excludeQueries=1" TARGET="_new">Recently Bookmarked (MALFORMEDURLEXCEPTION)</A></DIV>
 <DIV class="hiddenCat p_id1306902935" alt="[MY CAT&DOG]"><A HREF="place:type=6&sort=14&maxResults=10" TARGET="_new">Etichette recenti (MALFORMEDURLEXCEPTION)</A></DIV>
 <DIV><SPAN id="id-1128779071" onclick="showBookmarksByClassName(this.id)">[+]</SPAN> <SPAN onclick="showBookmarksByClassName('id-1128779071')">[MY CAT&DOG, MY CAT&DOG]</SPAN></DIV><DIV class="hiddenCat p_id-1128779071" alt="[MY CAT&DOG, MY CAT&DOG]"><A HREF="place:sort=8&maxResults=10" TARGET="_new">Più visitati (MALFORMEDURLEXCEPTION)</A></DIV>
+</DIV>
+
+
+<style type="text/css">
+    .hiddenCat {display: none;}
+    .hiddenCat A.active { color: darkolivegreen; }
+</style>
+<script>
+    function showBookmarks(id) { alert(id); document.getElementById('p_'+id).style.display='block'; }
+    function showBookmarksByClassName(id) { var domExpander = document.getElementById(id); if (domExpander.innerText=='[+]') domExpander.innerText = '[-]'; else domExpander.innerText = '[+]';
+        var doms = document.getElementsByClassName('p_'+id); /*alert(doms.length);*/
+        for ( dom of doms) { /*alert(dom.style.display);*/ dom.style.display= dom.style.display=='none'||dom.style.display=='' ? 'block' : 'none' ; }
+    }
+
+    function checkSanity() {
+        var domObj = document.getElementById('bkContainer');
+        for (const child of domObj.children) {
+            if (child.innerText.indexOf('(ONLINE)')!=-1) {
+                if ( child.children[0].innerText.indexOf('(ONLINE)') != -1 ) {
+                    child.children[0].style.color = "darkolivegreen";
+                }
+            } else {
+                if ( child.children[0].innerText.indexOf('(ONLINE)') == -1 ) {
+                    child.children[0].style.color = "lightcoral";
+                }
+            }
+        }
+    }
+
+    window.onload = checkSanity();
+
+</script>

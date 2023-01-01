@@ -156,12 +156,14 @@ public class BrowserBookmarkReader {
 
         if (ebof.equals(EBookmarkOutputFormat.WEBPAGE))
             fos.write("<html><head>".getBytes());
-        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT))
-            fos.write(attachedScript.getBytes());
+//        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT))
+//            fos.write(attachedScript.getBytes());
         if (ebof.equals(EBookmarkOutputFormat.WEBPAGE))
             fos.write("</head><body>".getBytes());
         if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT))
             fos.flush();
+
+        fos.write("<DIV id=\"bkContainer\">".getBytes());
 
         String lastCat = "";
 
@@ -188,8 +190,12 @@ public class BrowserBookmarkReader {
             fos.write(bookmarkOutput.getBytes());
             fos.flush();
 
-
         }
+
+        fos.write("</DIV>".getBytes());
+
+        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT))
+            fos.write(attachedScript.getBytes());
 
         if (ebof.equals(EBookmarkOutputFormat.WEBPAGE))
             fos.write("</body></html>".getBytes());
