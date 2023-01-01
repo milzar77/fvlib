@@ -93,17 +93,17 @@ public class XmlImport {
 		String out = "";
 		if ( System.getProperties().getProperty("java.version").indexOf("1.4") != -1 ) {
 			out = s;
-			String cutter = "[àìùòèé'«»]";
+			String cutter = "[Ã Ã¨Ã©Ã¬Ã¹Ã²']";
 			if (s.matches( ".*"+cutter+".*" )) {
-				out = s.replaceAll("[à]","&amp;agrave;");
-				out = out.replaceAll("[ì]","&amp;igrave;");
-				out = out.replaceAll("[ù]","&amp;ugrave;");
-				out = out.replaceAll("[ò]","&amp;ograve;");
-				out = out.replaceAll("[è]","&amp;egrave;");
-				out = out.replaceAll("[é]","&amp;eacute;");
+				out = s.replaceAll("[Ã ]","&amp;agrave;");
+				out = out.replaceAll("[Ã¬]","&amp;igrave;");
+				out = out.replaceAll("[Ã¹]","&amp;ugrave;");
+				out = out.replaceAll("[Ã²]","&amp;ograve;");
+				out = out.replaceAll("[Ã¨]","&amp;egrave;");
+				out = out.replaceAll("[Ã©]","&amp;eacute;");
 				out = out.replaceAll("[']","&amp;#39;");
-				out = out.replaceAll("[«]","&amp;laquo;");
-				out = out.replaceAll("[»]","&amp;raquo;");
+				/*out = out.replaceAll("[?]","&amp;laquo;");
+				out = out.replaceAll("[?]","&amp;raquo;");*/
 			}
 		} else {
 			// sostituzione apostrofo
@@ -113,7 +113,7 @@ public class XmlImport {
 	}
 	
 	public static final void main(String args[]) {
-		// System.out.println(replaceEntity("La gravità è una forza più forte dell'assenza, del perché ne parlerà «Cosimo de Cosmis»"));
+		// System.out.println(replaceEntity("La gravitÃ  Ã¨ una forza piÃ¹ forte dell'assenza, del perchÃ© ne parlerÃ² 'Cosimo de Cosmis'"));
 		
 		try {
 			/*

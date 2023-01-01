@@ -7,16 +7,16 @@
  *
  * [IBaseBean]
  * 2DO:
- * - rinominare i metodi con nomi più idonei
+ * - rinominare i metodi con nomi piÃ¹ idonei
  * - sostituire i caratteri accentati nei commenti con i caratteri unicode o
- * le entità html
+ * le entitÃ  html
  *
  */
 
 package com.blogspot.fravalle.j2ee.web.beans;
 /**
  * 
- * IBaseBean è un'interfaccia che dichiara i metodi di base di tutte le classi
+ * IBaseBean Ã¨ un'interfaccia che dichiara i metodi di base di tutte le classi
  * che ereditano l'abstract class BaseBean
  * 
  * @author antares

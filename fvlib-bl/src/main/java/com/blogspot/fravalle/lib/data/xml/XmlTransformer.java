@@ -197,7 +197,7 @@ public class XmlTransformer implements XmlConstants {
 		boolean isError = false;
 		try {
 			TransformerFactory tf = TransformerFactory.newInstance();
-			//TODO: controllare validit‡ degli altri metodi in cui Ë impiegato il metodo clearIllegalChars
+			//TODO: controllare validit√† degli altri metodi in cui √® impiegato il metodo clearIllegalChars
 			//File f = new File( this.modelViewPath );
 			File f = new File( clearIllegalChars(this.modelViewPath) );
 			if (!f.exists()) {

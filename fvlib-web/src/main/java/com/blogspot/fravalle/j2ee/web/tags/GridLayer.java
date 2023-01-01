@@ -95,8 +95,8 @@ public class GridLayer extends BodyTagSupport {
 	private String gridAltRows; 
 	/**
 	 * <code>linkSchema</code>: indicazioni dello schema del link principale della
-	 * griglia di visualizzazione, il formato Ë composto da "colonna testo hyperlink"
-	 * + "colonne valore hyperlink", es: "2-{[1][3]}" colonna 2 il cui hyperlink Ë
+	 * griglia di visualizzazione, il formato √® composto da "colonna testo hyperlink"
+	 * + "colonne valore hyperlink", es: "2-{[1][3]}" colonna 2 il cui hyperlink √®
 	 * composto dalla colonna 1 e 3
 	 */
 	private String linkSchema;
@@ -635,7 +635,7 @@ public class GridLayer extends BodyTagSupport {
 								
 							} else {
 								if (this.isHyperlinkColumn(i)) {
-									/* 6ba) Dopo aver controllato la validit‡ genero la cella e la particella del valore hyperlink */
+									/* 6ba) Dopo aver controllato la validit√† genero la cella e la particella del valore hyperlink */
 									sbTableRow.append( this.makeTableCell(sqlColumnValue,i,rsmd.getColumnCount(),iRowCounter) );
 									hyperlinkValue += sqlColumnValue + UtilConstants.PAR_KEY_SEPARATOR;
 								} else {

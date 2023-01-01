@@ -1,4 +1,4 @@
-package com.blogspot.fravalle.lib.data.xml;
+package com.blogspot.fravalle.lib.importer.bookmarks;
 
 public enum EBookmarkStatus {
 

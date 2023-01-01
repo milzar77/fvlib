@@ -1,6 +1,5 @@
-package com.blogspot.fravalle.lib.data.xml;
+package com.blogspot.fravalle.lib.importer.bookmarks;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;

@@ -364,7 +364,7 @@ public abstract class ADb extends HttpServlet implements UtilConstants {
 	
 	/**
 	 * 
-	 * Metodo impiegato per recuperare un valore singolo (select), oppure per impostare più valori (update, insert) 
+	 * Metodo impiegato per recuperare un valore singolo (select), oppure per impostare piÃ¹ valori (update, insert)
 	 * 
 	 * @param area
 	 * Identificatore dell'area (chiave di gruppo)
@@ -409,7 +409,7 @@ public abstract class ADb extends HttpServlet implements UtilConstants {
     			} else {
 	    			String selectedCols = checkQuery.substring("select ".length(), checkQuery.indexOf(" from "));
 	    			if (selectedCols.indexOf("*") != -1 || selectedCols.indexOf(",") != -1)
-	    				throw new WebObjectException("[WEBOBJECTEXCEPTION] La query di selezione indicata contiente più colonne di selezione, riportare la query con una sola colonna di selezione: " + checkQuery);
+	    				throw new WebObjectException("[WEBOBJECTEXCEPTION] La query di selezione indicata contiente piÃ¹ colonne di selezione, riportare la query con una sola colonna di selezione: " + checkQuery);
     			}
     		}
         	
@@ -474,7 +474,7 @@ public abstract class ADb extends HttpServlet implements UtilConstants {
 	
 	/**
 	 * 
-	 * Metodo impiegato per recuperare dati in formato xml (select), oppure per impostare più valori (update, insert)
+	 * Metodo impiegato per recuperare dati in formato xml (select), oppure per impostare piÃ¹ valori (update, insert)
 	 * 
 	 * @param area
 	 * Identificatore dell'area (chiave di gruppo)
@@ -568,7 +568,7 @@ public abstract class ADb extends HttpServlet implements UtilConstants {
 	
 	/**
 	 * 
-	 * Metodo impiegato per recuperare dati in formato xml (select), oppure per impostare più valori (update, insert)
+	 * Metodo impiegato per recuperare dati in formato xml (select), oppure per impostare piÃ¹ valori (update, insert)
 	 * 
 	 * @param area
 	 * Identificatore dell'area (chiave di gruppo)

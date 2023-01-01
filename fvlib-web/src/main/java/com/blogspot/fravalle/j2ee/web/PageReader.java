@@ -122,7 +122,7 @@ public class PageReader extends BaseController {
 								String[] saPageStructure = new String[2];
 								saPageStructure = this.buildDocument(key[0], key[1]); 
 								
-								if (saPageStructure[TOKEN_PAGEVIEW]==null) // se non è presente il rif al xsl utilizzo il nome della servlet mappata
+								if (saPageStructure[TOKEN_PAGEVIEW]==null) // se non Ã¨ presente il rif al xsl utilizzo il nome della servlet mappata
 									saPageStructure[TOKEN_PAGEVIEW] = getServletName();
 								StringBuffer sXmlBuffer = new StringBuffer( XmlUtils.tagPage(saPageStructure[TOKEN_PAGEVIEW], saPageStructure[TOKEN_PAGECONTENT], req) );
 

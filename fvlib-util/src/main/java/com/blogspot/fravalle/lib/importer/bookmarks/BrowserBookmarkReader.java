@@ -1,4 +1,4 @@
-package com.blogspot.fravalle.lib.data.xml;
+package com.blogspot.fravalle.lib.importer.bookmarks;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -13,11 +13,23 @@ public class BrowserBookmarkReader {
 
     static final protected Logger logger = Logger.getLogger(BrowserBookmarkReader.class.getName());
 
+    static final private Vector<String> safetyFilter;
+
+    static {
+        safetyFilter = new Vector<String>();
+        //THIS IS A MALICIOUS SITE NOTIFIED BY FIREFOX AND SILENTLY SUPPRESSED BY BLOGSPOT
+        safetyFilter.add("http://arts.cultural-china.com/");
+    }
+
     static private LinkedHashMap<String, BookmarkReference> BOOKMARKS_CACHE = new LinkedHashMap<String, BookmarkReference>();
 
     static private EBookmarkOutputFormat ebof;
 
     static private Boolean checkSanity;
+
+    static private Integer sliceIntoPieces = 1500000;
+
+    static Vector<String> spooler = new Vector<String>();
 
     private LinkedHashMap<String, BookmarkReference> BOOKMARKS_SESSION = new LinkedHashMap<String, BookmarkReference>();
 
@@ -47,6 +59,145 @@ public class BrowserBookmarkReader {
         return null;
     }
 
+    public static void writeSpooler() throws IOException {
+        Integer aboutTotalAmountOfBytes = 0;
+
+        ///////==>FROM HERE
+
+        //File fOut = new File("./bookmarks-fv.html");
+        //FileOutputStream fos = new FileOutputStream(fOut, false);
+
+        String attachedScript ="" +
+                "<style type=\"text/css\">.hiddenCat {display: none;}</style>" +
+                "<script>" +
+                "function showBookmarks(id) { alert(id); document.getElementById('p_'+id).style.display='block'; }" +
+                "function showBookmarksByClassName(id) { var domExpander = document.getElementById(id); if (domExpander.innerText=='[+]') domExpander.innerText = '[-]'; else domExpander.innerText = '[+]'; " +
+                "var doms = document.getElementsByClassName('p_'+id); /*alert(doms.length);*/ " +
+                "for ( dom of doms) { /*alert(dom.style.display);*/ dom.style.display= dom.style.display=='none'||dom.style.display=='' ? 'block' : 'none' ; }" +
+                "}" +
+                "</script>";
+
+        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE)) {
+            //fos.write("<html><head>".getBytes());
+            spooler.add("<html><head>");
+        }
+//        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT))
+//            fos.write(attachedScript.getBytes());
+        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE)) {
+            //fos.write("</head><body>".getBytes());
+            spooler.add("</head><body>");
+        }
+        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT)) {
+            //fos.flush();
+        }
+
+        //fos.write("<DIV id=\"bkContainer\">".getBytes());
+        spooler.add("<DIV id=\"bkContainer\">");
+
+        String lastCat = "";
+
+        for (String k : BOOKMARKS_CACHE.keySet()) {
+            logger.info("IMPORTED KEY ID:\t" + k);
+            logger.finer("IMPORTED KEY PATH:\t" + BOOKMARKS_CACHE.get(k).categoryPath);
+            logger.finest("IMPORTED KEY VALUE:\t" + BOOKMARKS_CACHE.get(k).values);
+
+            String catId = BOOKMARKS_CACHE.get(k).categoryPath.hashCode()+"";
+            String catName = BOOKMARKS_CACHE.get(k).categoryPath.toString();
+            String bkStatus = BOOKMARKS_CACHE.get(k).ebs.toString();
+
+            String bookmarkOutput = "";
+
+            if (BOOKMARKS_CACHE.get(k).key.startsWith("http")) {
+                String[] pieceOfUrl1 = BOOKMARKS_CACHE.get(k).key.split("://");
+                String bookmarkSkeleton = "<DIV class=\"hiddenCat p_id%s\" alt=\"%s\"><A TARGET=\"_new\" onclick=\"inMemoryOfNavigator('%s','%s')\" >%s (%s)</A></DIV>\n";
+                bookmarkOutput = String.format(bookmarkSkeleton, catId, catName, pieceOfUrl1[0], pieceOfUrl1[1], BOOKMARKS_CACHE.get(k).values.get("LABEL"), bkStatus);
+            }
+
+
+            String catOutputSkeleton = "<DIV><SPAN id=\"id%s\" onclick=\"showBookmarksByClassName(this.id)\">[+]</SPAN> <SPAN onclick=\"showBookmarksByClassName('id%s')\">%s</SPAN>" +
+                    "<SPAN onclick=\"showUnavailable('id%s')\" alt='Show/Hide unavailable bookmarked sites'>-o-</SPAN>" +
+                    "</DIV>";
+            String catOutput = String.format(catOutputSkeleton, catId, catId, catName, catId);
+
+            if (!lastCat.equals(catName)) {
+                //fos.write(catOutput.getBytes());
+                spooler.add(catOutput);
+                lastCat = catName;
+                aboutTotalAmountOfBytes += catOutput.length();
+            }
+
+            if (BOOKMARKS_CACHE.get(k).key.startsWith("http")) {
+                //fos.write(bookmarkOutput.getBytes());
+                spooler.add(bookmarkOutput);
+                aboutTotalAmountOfBytes += bookmarkOutput.length();
+            }
+            //fos.flush();
+
+        }
+
+        //fos.write("</DIV>".getBytes());
+        spooler.add("</DIV>");
+
+        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT)) {
+            //fos.write(attachedScript.getBytes());
+            spooler.add(attachedScript);
+            aboutTotalAmountOfBytes += attachedScript.length();
+        }
+
+        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE)) {
+            //fos.write("</body></html>".getBytes());
+            spooler.add("</body></html>");
+        }
+
+        /*if (ebof.equals(EBookmarkOutputFormat.WEBPAGE))
+            fos.flush();*/
+
+        //fos.close();
+
+        logger.info("ABOUT TOTAL AMOUNT OF BYTES="+aboutTotalAmountOfBytes);
+
+
+        ///////==>UNTIL HERE
+
+        aboutTotalAmountOfBytes = 0;
+        Integer totalAmountOfBytes = 0;
+        Integer slicerCounter = 1;
+
+        //File fOut = new File("./bookmarks-fv-test.html");
+        File fOut = new File("./bookmarks-fv-test_"+slicerCounter+".html");
+        FileOutputStream fos = new FileOutputStream(fOut, false);
+
+        for (String ln : spooler) {
+            aboutTotalAmountOfBytes += ln.length();
+            totalAmountOfBytes += ln.length();
+            fos.write(ln.getBytes());
+            fos.flush();
+            if (aboutTotalAmountOfBytes > sliceIntoPieces) {
+
+
+                logger.info("REACHED! SIZE LIMIT ["+aboutTotalAmountOfBytes+"] ON: " + ln);
+
+                fos.flush();
+                fos.close();
+
+                fos = null;
+
+                slicerCounter += 1;
+
+                aboutTotalAmountOfBytes = 0;
+
+                fOut = new File("./bookmarks-fv-test_"+slicerCounter+".html");
+                fos = new FileOutputStream(fOut, false);
+            }
+
+        }
+
+        fos.close();
+
+        logger.info("==> TOTAL AMOUNT OF BYTES IN SPOOLING="+totalAmountOfBytes);
+
+    }
+
     public void importData() throws IOException {
         logger.info("Start data import");
 
@@ -73,14 +224,18 @@ public class BrowserBookmarkReader {
                 myCategoryPath.addAll(currentCategoryPath);
                 BookmarkReference bk = new BookmarkReference(fileChannel, line, this.useAsPrimaryReference, myCategoryPath, checkSanity);
                 //aggiungo il bookmark reference all'elenco univoco di bookmark reference
-                if (!BOOKMARKS_CACHE.containsKey(bk.key))
+                if (safetyFilter.toString().contains( bk.key ) ) {
+                    //skip for safety reason
+                    continue;
+                }
+                if (!BOOKMARKS_CACHE.containsKey(bk.key)) {
                     if (this.useAsPrimaryReference) {
                         BOOKMARKS_CACHE.put(bk.key, bk);
                     } else {
                         if (!bk.hasPrimaryReference)
                             BOOKMARKS_CACHE.put(bk.key, bk);
                     }
-                else {
+                } else {
                     String currentCat = bk.categoryPath.toString();
                     bk = BOOKMARKS_CACHE.get(bk.key);
                     bk.totalDuplicatesInTree += 1;
@@ -117,92 +272,6 @@ public class BrowserBookmarkReader {
 
 
 
-        for (String k : BOOKMARKS_CACHE.keySet()) {
-            URL url = new URL("http://www.google.com");
-            HttpURLConnection httpConn = (HttpURLConnection)url.openConnection();
-            logger.info("HTTP CONN STATUS: " + httpConn.getResponseCode());
-            logger.info("HTTP CONN MESSAGE: " + httpConn.getResponseMessage());
-            //StringReader isr = new StringReader();
-            InputStream is = (InputStream) httpConn.getContent();
-            Scanner s = new Scanner(is).useDelimiter("\\A");
-            String result = s.hasNext() ? s.next() : "";
-
-            logger.finest("HTTP CONN CONTENT: [" + result + "]");
-            logger.info("HTTP CONN POTENTIAL SUBMIT: [" + (result.indexOf("\"404\"")!=-1
-                    || result.indexOf("'404'")!=-1
-                    || result.indexOf(">404<")!=-1
-                    || result.matches(".*\\b404\\b.*"))
-                    + "]");
-            httpConn.disconnect();
-            break;
-        }
-
-
-
-
-
-        File fOut = new File("./bookmarks-fv.html");
-        FileOutputStream fos = new FileOutputStream(fOut, false);
-
-        String attachedScript ="" +
-                "<style type=\"text/css\">.hiddenCat {display: none;}</style>" +
-                "<script>" +
-                "function showBookmarks(id) { alert(id); document.getElementById('p_'+id).style.display='block'; }" +
-                "function showBookmarksByClassName(id) { var domExpander = document.getElementById(id); if (domExpander.innerText=='[+]') domExpander.innerText = '[-]'; else domExpander.innerText = '[+]'; " +
-                "var doms = document.getElementsByClassName('p_'+id); /*alert(doms.length);*/ " +
-                "for ( dom of doms) { /*alert(dom.style.display);*/ dom.style.display= dom.style.display=='none'||dom.style.display=='' ? 'block' : 'none' ; }" +
-                "}" +
-                "</script>";
-
-        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE))
-            fos.write("<html><head>".getBytes());
-//        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT))
-//            fos.write(attachedScript.getBytes());
-        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE))
-            fos.write("</head><body>".getBytes());
-        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT))
-            fos.flush();
-
-        fos.write("<DIV id=\"bkContainer\">".getBytes());
-
-        String lastCat = "";
-
-        for (String k : BOOKMARKS_CACHE.keySet()) {
-            logger.info("IMPORTED KEY ID:\t" + k);
-            logger.finer("IMPORTED KEY PATH:\t" + BOOKMARKS_CACHE.get(k).categoryPath);
-            logger.finest("IMPORTED KEY VALUE:\t" + BOOKMARKS_CACHE.get(k).values);
-
-            String catId = BOOKMARKS_CACHE.get(k).categoryPath.hashCode()+"";
-            String catName = BOOKMARKS_CACHE.get(k).categoryPath.toString();
-            String bkStatus = BOOKMARKS_CACHE.get(k).ebs.toString();
-
-            String bookmarkSkeleton = "<DIV class=\"hiddenCat p_id%s\" alt=\"%s\"><A HREF=\"%s\" TARGET=\"_new\">%s (%s)</A></DIV>\n";
-            String bookmarkOutput = String.format(bookmarkSkeleton, catId, catName, BOOKMARKS_CACHE.get(k).key, BOOKMARKS_CACHE.get(k).values.get("LABEL"), bkStatus);
-
-            String catOutputSkeleton = "<DIV><SPAN id=\"id%s\" onclick=\"showBookmarksByClassName(this.id)\">[+]</SPAN> <SPAN onclick=\"showBookmarksByClassName('id%s')\">%s</SPAN></DIV>";
-            String catOutput = String.format(catOutputSkeleton, catId, catId, catName);
-
-            if (!lastCat.equals(catName)) {
-                fos.write(catOutput.getBytes());
-                lastCat = catName;
-            }
-
-            fos.write(bookmarkOutput.getBytes());
-            fos.flush();
-
-        }
-
-        fos.write("</DIV>".getBytes());
-
-        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE) || ebof.equals(EBookmarkOutputFormat.WEBFRAGMENT))
-            fos.write(attachedScript.getBytes());
-
-        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE))
-            fos.write("</body></html>".getBytes());
-        if (ebof.equals(EBookmarkOutputFormat.WEBPAGE))
-            fos.flush();
-
-        fos.close();
 
     }
 
@@ -210,9 +279,10 @@ public class BrowserBookmarkReader {
     public static void main(String[] args) throws IOException {
 
         //"/home/goldenplume/Documenti/BookmarksBackup/FV-FREE"
-        if (args.length==3) {
+        if (args.length==4) {
 
             checkSanity = Boolean.parseBoolean(args[2]);
+            sliceIntoPieces = Integer.parseInt(args[3]);
 
             /*System.out.println("STATUS: " + checkSanity);
             if (true)
@@ -271,6 +341,8 @@ public class BrowserBookmarkReader {
                 logger.finest("Bookmark source used to override all others: "+ currentOverridesAll.getName() +"; Current source: [" + b.fileChannel.getName() + "]");
                 b.importData();
             }
+
+            BrowserBookmarkReader.writeSpooler();
 
         }
 

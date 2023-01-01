@@ -66,7 +66,7 @@ public abstract class XmlUtils implements UtilConstants {
 	}
 	
 	/**
-	 * Metodo di generazione tag il cui contenuto è di tipo CDATA
+	 * Metodo di generazione tag il cui contenuto Ã¨ di tipo CDATA
 	 * 
 	 * @param parName
 	 * Nome assegnato al tag
@@ -80,7 +80,7 @@ public abstract class XmlUtils implements UtilConstants {
 		return "<" + parName + "><![CDATA[" + parValue + "]]></" + parName + ">";
 	}
 	/**
-	 * Metodo di generazione tag il cui contenuto è di tipo plain text
+	 * Metodo di generazione tag il cui contenuto Ã¨ di tipo plain text
 	 * 
 	 * @param parName
 	 * Nome assegnato al tag
@@ -94,7 +94,7 @@ public abstract class XmlUtils implements UtilConstants {
 	}
 	
 	/**
-	 * Metodo di generazione tag il cui contenuto è di tipo CDATA
+	 * Metodo di generazione tag il cui contenuto Ã¨ di tipo CDATA
 	 * 
 	 * @param parName
 	 * Nome assegnato al tag
@@ -107,7 +107,7 @@ public abstract class XmlUtils implements UtilConstants {
 		return "<" + parName + "><![CDATA[" + parValue + "]]></" + parName + ">";
 	}
 	/**
-	 * Metodo di generazione tag il cui contenuto è di tipo CDATA, il tag è inoltre corredato di commento tecnico 
+	 * Metodo di generazione tag il cui contenuto Ã¨ di tipo CDATA, il tag Ã¨ inoltre corredato di commento tecnico
 	 * 
 	 * @param parName
 	 * Nome assegnato al tag
@@ -122,7 +122,7 @@ public abstract class XmlUtils implements UtilConstants {
 		return "<" + parName + "><!-- " + comment + " --><![CDATA[" + parValue + "]]></" + parName + ">";
 	}
 	/**
-	 * Metodo di generazione tag il cui contenuto è di tipo CDATA, corredato di attributi
+	 * Metodo di generazione tag il cui contenuto Ã¨ di tipo CDATA, corredato di attributi
 	 * 
 	 * @param parName
 	 * Nome assegnato al tag
@@ -151,7 +151,7 @@ public abstract class XmlUtils implements UtilConstants {
 		return "<" + parName + attPipe.toString() + "><![CDATA[" + parValue + "]]>"+sLabel+"</" + parName + ">";
 	}
 	/**
-	 * Metodo di generazione tag il cui contenuto è di tipo plain text, corredato di attributi
+	 * Metodo di generazione tag il cui contenuto Ã¨ di tipo plain text, corredato di attributi
 	 * 
 	 * @param parName
 	 * Nome assegnato al tag
@@ -175,7 +175,7 @@ public abstract class XmlUtils implements UtilConstants {
 		return "<" + parName + attPipe.toString() + ">" + parValue + "</" + parName + ">";
 	}
 	/**
-	 * Metodo di generazione tag il cui contenuto è di tipo plain text, corredato di attributo singolo
+	 * Metodo di generazione tag il cui contenuto Ã¨ di tipo plain text, corredato di attributo singolo
 	 * 
 	 * @param parName
 	 * Nome assegnato al tag

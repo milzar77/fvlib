@@ -113,7 +113,7 @@ public abstract class SettingRes extends AResource {
 		
 		try {
 			value = opzioni.getProperty(key);
-			//TODO: controllare validit‡
+			//TODO: controllare validit√†
 			/*
 			value = logFlow(key, value);
 			value += opzioni.getProperty(key);
