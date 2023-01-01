@@ -98,7 +98,8 @@ public class BookmarkReference {
         } catch (java.net.UnknownHostException e) {
             this.ebs = EBookmarkStatus.NOT_MORE_REACHABLE;
         } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
+            this.ebs = EBookmarkStatus.MALFORMEDURLEXCEPTION;
+            //throw new RuntimeException(e);
         } catch (IOException e) {
             this.ebs = EBookmarkStatus.IOEXCEPTION;
             //throw new RuntimeException(e);
