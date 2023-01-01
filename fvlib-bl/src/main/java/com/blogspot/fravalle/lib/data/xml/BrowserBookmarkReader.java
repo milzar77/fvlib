@@ -166,7 +166,7 @@ public class BrowserBookmarkReader {
         String lastCat = "";
 
         for (String k : BOOKMARKS_CACHE.keySet()) {
-            logger.fine("IMPORTED KEY ID:\t" + k);
+            logger.info("IMPORTED KEY ID:\t" + k);
             logger.finer("IMPORTED KEY PATH:\t" + BOOKMARKS_CACHE.get(k).categoryPath);
             logger.finest("IMPORTED KEY VALUE:\t" + BOOKMARKS_CACHE.get(k).values);
 
